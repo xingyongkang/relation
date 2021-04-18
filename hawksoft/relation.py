@@ -1,6 +1,14 @@
 import sympy
 from sympy.abc import x,y
 import graphviz as gz
+import networkx
+
+import matplotlib
+print(matplotlib.get_backend())
+#matplotlib.use('AAgg') 
+
+import matplotlib.pyplot as plt
+
 class Relation(sympy.FiniteSet):
     def __init__(self,*items,name='noName',index = None):
         sympy.FiniteSet(self,*items)
@@ -34,7 +42,7 @@ class Relation(sympy.FiniteSet):
         for i in self:
             print(i,end=" ")
         print("}\n")
-    def drawGraph(self):
+    def drawGraph1(self):
         g = gz.Graph(format='png')
         for i in self.C:
             g.node(str(i))
@@ -44,6 +52,13 @@ class Relation(sympy.FiniteSet):
         g.edges(l)
         #print(g.source)
         g.render('./test',view=True) 
+    def drawGraph(self):
+        g = networkx.Graph()
+        g.add_nodes_from([1,2,3,4,5])
+        g.add_edges_from([(1,2),(1,3),(2,3),(4,5),(5,4)])
+        plt.subplot(111)
+        networkx.draw(g, with_labels=True, font_weight='bold')
+        plt.show()
     def drawDigraph(self):
         g = gz.Digraph(format='png')
         for i in self.A:
