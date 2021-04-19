@@ -25,13 +25,18 @@ class Relation(sympy.FiniteSet):
     """
     define a class for sympy.
     @author hawksoft
+    Parameters:
+      
     """
     def __init__(self,*items,name='noName',index = None):
         '''
-        items: 2-tuples list
-        name: you can give name to the relation
-        index: the set on which the relation define
-        return: a relation object  
+        init a relation
+        parameters:
+          para1: items: 2-tuples list
+          para2: name: you can give name to the relation
+          para3:index: the set on which the relation define
+        returns
+           a relation object  
         '''
         sympy.FiniteSet(self,*items)
         self.name = name
@@ -60,10 +65,7 @@ class Relation(sympy.FiniteSet):
         for i in ta:
             print(i[0],i[1])
     def showSet(self):
-        print("{} = ".format(self.name),end="{ ")
-        for i in self:
-            print(i,end=" ")
-        print("}\n")
+        sympy.pprint(self)
     def drawGraph1(self):
         g = gz.Graph(format='png')
         for i in self.C:
@@ -81,6 +83,9 @@ class Relation(sympy.FiniteSet):
         plt.subplot(111)
         networkx.draw(g, with_labels=True, font_weight='bold')
         plt.show()
+    def showMatrix(self):
+        self.toMatrix()
+        sympy.pprint(self.matrix)
     def drawDigraph(self):
         g = gz.Digraph(format='png')
         for i in self.A:
