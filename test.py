@@ -22,9 +22,9 @@ class Test(unittest.TestCase):
     def test_Relation(self):
         #r1 = Relation((1,2),(2,3),(1,3),(2,1),(3,2),(3,1))
         r1 = Relation(('a','b'),('a','c'),name ='first')
-        r1.show()
+        r1.showSet()
         print(r1.get_index())
-        r1.drawGraph()
+        r1.showGraph()
         
     def atest_toMatrix(self):
         r1 = Relation(('a','b'),('a','c'))

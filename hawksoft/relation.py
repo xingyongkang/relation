@@ -1,16 +1,38 @@
+# relation.py
+"""
+This module defined  Realtion class as an complimentation to sympy package. 
+you can use it like this:
+1 define an relation object:
+  r1 = Relation((1,2),(2,3))
+  r2 = Ralation((2,3),(1,3))
+2 use thes object
+  r1.showSet()  # will show the relation as a set
+  r1.showGraph() # will show the relation as a graph
+  r1.showMatrix() # will show the relation as a matrix  
+"""
 import sympy
 from sympy.abc import x,y
 import graphviz as gz
 import networkx
 
-import matplotlib
-print(matplotlib.get_backend())
+#import matplotlib
+#print(matplotlib.get_backend())
 #matplotlib.use('AAgg') 
 
 import matplotlib.pyplot as plt
 
 class Relation(sympy.FiniteSet):
+    """
+    define a class for sympy.
+    @author hawksoft
+    """
     def __init__(self,*items,name='noName',index = None):
+        '''
+        items: 2-tuples list
+        name: you can give name to the relation
+        index: the set on which the relation define
+        return: a relation object  
+        '''
         sympy.FiniteSet(self,*items)
         self.name = name
         if index == None:
@@ -37,7 +59,7 @@ class Relation(sympy.FiniteSet):
         print(ta)
         for i in ta:
             print(i[0],i[1])
-    def show(self):
+    def showSet(self):
         print("{} = ".format(self.name),end="{ ")
         for i in self:
             print(i,end=" ")
@@ -52,7 +74,7 @@ class Relation(sympy.FiniteSet):
         g.edges(l)
         #print(g.source)
         g.render('./test',view=True) 
-    def drawGraph(self):
+    def showGraph(self):
         g = networkx.Graph()
         g.add_nodes_from([1,2,3,4,5])
         g.add_edges_from([(1,2),(1,3),(2,3),(4,5),(5,4)])

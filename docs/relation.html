@@ -1,0 +1,1567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module relation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>relation</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/xingyongkang/PythonShop/relation/hawksoft/relation.py">/Users/xingyongkang/PythonShop/relation/hawksoft/relation.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;module&nbsp;defined&nbsp;&nbsp;Realtion&nbsp;class&nbsp;as&nbsp;an&nbsp;complimentation&nbsp;to&nbsp;sympy&nbsp;package.&nbsp;<br>
+you&nbsp;can&nbsp;use&nbsp;it&nbsp;like&nbsp;this:<br>
+1&nbsp;define&nbsp;an&nbsp;relation&nbsp;object:<br>
+&nbsp;&nbsp;r1&nbsp;=&nbsp;<a href="#Relation">Relation</a>((1,2),(2,3))<br>
+&nbsp;&nbsp;r2&nbsp;=&nbsp;Ralation((2,3),(1,3))<br>
+2&nbsp;use&nbsp;thes&nbsp;object<br>
+&nbsp;&nbsp;r1.showSet()&nbsp;&nbsp;#&nbsp;will&nbsp;show&nbsp;the&nbsp;relation&nbsp;as&nbsp;a&nbsp;set<br>
+&nbsp;&nbsp;r1.showGraph()&nbsp;#&nbsp;will&nbsp;show&nbsp;the&nbsp;relation&nbsp;as&nbsp;a&nbsp;graph<br>
+&nbsp;&nbsp;r1.showMatrix()&nbsp;#&nbsp;will&nbsp;show&nbsp;the&nbsp;relation&nbsp;as&nbsp;a&nbsp;matrix</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="graphviz.html">graphviz</a><br>
+</td><td width="25%" valign=top><a href="networkx.html">networkx</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="sympy.html">sympy</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>(<a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a>, <a href="sympy.core.evalf.html#EvalfMixin">sympy.core.evalf.EvalfMixin</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="relation.html#Relation">Relation</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Relation">class <strong>Relation</strong></a>(<a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Relation">Relation</a>(*args,&nbsp;**kwargs)<br>
+&nbsp;<br>
+define&nbsp;a&nbsp;class&nbsp;for&nbsp;sympy.<br>
+@author&nbsp;hawksoft<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="relation.html#Relation">Relation</a></dd>
+<dd><a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a></dd>
+<dd><a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a></dd>
+<dd><a href="sympy.core.basic.html#Basic">sympy.core.basic.Basic</a></dd>
+<dd><a href="sympy.printing.defaults.html#Printable">sympy.printing.defaults.Printable</a></dd>
+<dd><a href="sympy.core.evalf.html#EvalfMixin">sympy.core.evalf.EvalfMixin</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Relation-__add__"><strong>__add__</strong></a>(self, adds)</dt></dl>
+
+<dl><dt><a name="Relation-__init__"><strong>__init__</strong></a>(self, *items, name='noName', index=None)</dt><dd><tt>items:&nbsp;2-tuples&nbsp;list<br>
+name:&nbsp;you&nbsp;can&nbsp;give&nbsp;name&nbsp;to&nbsp;the&nbsp;relation<br>
+index:&nbsp;the&nbsp;set&nbsp;on&nbsp;which&nbsp;the&nbsp;relation&nbsp;define<br>
+return:&nbsp;a&nbsp;relation&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="Relation-__sub__"><strong>__sub__</strong></a>(self, subs)</dt></dl>
+
+<dl><dt><a name="Relation-compound"><strong>compound</strong></a>(self, num)</dt></dl>
+
+<dl><dt><a name="Relation-converse"><strong>converse</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-drawDigraph"><strong>drawDigraph</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-drawGraph"><strong>drawGraph</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-drawGraph1"><strong>drawGraph1</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-findAB"><strong>findAB</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-findC"><strong>findC</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-fromMatrix"><strong>fromMatrix</strong></a>(self, matrix)</dt></dl>
+
+<dl><dt><a name="Relation-get_index"><strong>get_index</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-identity"><strong>identity</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-refClosure"><strong>refClosure</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-show"><strong>show</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-symClosure"><strong>symClosure</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-toMatrix"><strong>toMatrix</strong></a>(self)</dt></dl>
+
+<hr>
+Readonly properties defined here:<br>
+<dl><dt><strong>__sympy__</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>default_assumptions</strong> = {}</dl>
+
+<hr>
+Methods inherited from <a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>:<br>
+<dl><dt><a name="Relation-__ge__"><strong>__ge__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="Relation-__gt__"><strong>__gt__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="Relation-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-__le__"><strong>__le__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="Relation-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-__lt__"><strong>__lt__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="Relation-as_relational"><strong>as_relational</strong></a>(self, symbol)</dt><dd><tt>Rewrite&nbsp;a&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>&nbsp;in&nbsp;terms&nbsp;of&nbsp;equalities&nbsp;and&nbsp;logic&nbsp;operators.</tt></dd></dl>
+
+<dl><dt><a name="Relation-compare"><strong>compare</strong></a>(self, other)</dt><dd><tt>Return&nbsp;-1,&nbsp;0,&nbsp;1&nbsp;if&nbsp;the&nbsp;object&nbsp;is&nbsp;smaller,&nbsp;equal,&nbsp;or&nbsp;greater&nbsp;than&nbsp;other.<br>
+&nbsp;<br>
+Not&nbsp;in&nbsp;the&nbsp;mathematical&nbsp;sense.&nbsp;If&nbsp;the&nbsp;object&nbsp;is&nbsp;of&nbsp;a&nbsp;different&nbsp;type<br>
+from&nbsp;the&nbsp;"other"&nbsp;then&nbsp;their&nbsp;classes&nbsp;are&nbsp;ordered&nbsp;according&nbsp;to<br>
+the&nbsp;sorted_classes&nbsp;list.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&gt;&gt;&gt;&nbsp;x.<a href="#Relation-compare">compare</a>(y)<br>
+-1<br>
+&gt;&gt;&gt;&nbsp;x.<a href="#Relation-compare">compare</a>(x)<br>
+0<br>
+&gt;&gt;&gt;&nbsp;y.<a href="#Relation-compare">compare</a>(x)<br>
+1</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>:<br>
+<dl><dt><a name="Relation-__new__"><strong>__new__</strong></a>(cls, *args, **kwargs)</dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Readonly properties inherited from <a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>:<br>
+<dl><dt><strong>measure</strong></dt>
+<dd><tt>The&nbsp;(Lebesgue)&nbsp;measure&nbsp;of&nbsp;'self'<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;Union<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).measure<br>
+1<br>
+&gt;&gt;&gt;&nbsp;Union(Interval(0,&nbsp;1),&nbsp;Interval(2,&nbsp;3)).measure<br>
+2</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="sympy.sets.sets.html#FiniteSet">sympy.sets.sets.FiniteSet</a>:<br>
+<dl><dt><strong>is_FiniteSet</strong> = True</dl>
+
+<dl><dt><strong>is_empty</strong> = False</dl>
+
+<dl><dt><strong>is_finite_set</strong> = True</dl>
+
+<dl><dt><strong>is_iterable</strong> = True</dl>
+
+<hr>
+Methods inherited from <a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a>:<br>
+<dl><dt><a name="Relation-__and__"><strong>__and__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Relation-__contains__"><strong>__contains__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Relation-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Relation-__or__"><strong>__or__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Relation-__pow__"><strong>__pow__</strong></a>(self, exp)</dt></dl>
+
+<dl><dt><a name="Relation-__xor__"><strong>__xor__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Relation-complement"><strong>complement</strong></a>(self, universe)</dt><dd><tt>The&nbsp;complement&nbsp;of&nbsp;'self'&nbsp;w.r.t&nbsp;the&nbsp;given&nbsp;universe.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-complement">complement</a>(S.Reals)<br>
+Union(Interval.open(-oo,&nbsp;0),&nbsp;Interval.open(1,&nbsp;oo))<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-complement">complement</a>(S.UniversalSet)<br>
+Complement(UniversalSet,&nbsp;Interval(0,&nbsp;1))</tt></dd></dl>
+
+<dl><dt><a name="Relation-contains"><strong>contains</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;a&nbsp;SymPy&nbsp;value&nbsp;indicating&nbsp;whether&nbsp;``other``&nbsp;is&nbsp;contained<br>
+in&nbsp;``self``:&nbsp;``true``&nbsp;if&nbsp;it&nbsp;is,&nbsp;``false``&nbsp;if&nbsp;it&nbsp;isn't,&nbsp;else<br>
+an&nbsp;unevaluated&nbsp;``Contains``&nbsp;expression&nbsp;(or,&nbsp;as&nbsp;in&nbsp;the&nbsp;case&nbsp;of<br>
+ConditionSet&nbsp;and&nbsp;a&nbsp;union&nbsp;of&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>/Intervals,&nbsp;an&nbsp;expression<br>
+indicating&nbsp;the&nbsp;conditions&nbsp;for&nbsp;containment).<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-contains">contains</a>(0.5)<br>
+True<br>
+&nbsp;<br>
+As&nbsp;a&nbsp;shortcut&nbsp;it&nbsp;is&nbsp;possible&nbsp;to&nbsp;use&nbsp;the&nbsp;'in'&nbsp;operator,&nbsp;but&nbsp;that<br>
+will&nbsp;raise&nbsp;an&nbsp;error&nbsp;unless&nbsp;an&nbsp;affirmative&nbsp;true&nbsp;or&nbsp;false&nbsp;is&nbsp;not<br>
+obtained.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-contains">contains</a>(x)<br>
+(0&nbsp;&lt;=&nbsp;x)&nbsp;&amp;&nbsp;(x&nbsp;&lt;=&nbsp;1)<br>
+&gt;&gt;&gt;&nbsp;x&nbsp;in&nbsp;Interval(0,&nbsp;1)<br>
+Traceback&nbsp;(most&nbsp;recent&nbsp;call&nbsp;last):<br>
+...<br>
+TypeError:&nbsp;did&nbsp;not&nbsp;evaluate&nbsp;to&nbsp;a&nbsp;bool:&nbsp;None<br>
+&nbsp;<br>
+The&nbsp;result&nbsp;of&nbsp;'in'&nbsp;is&nbsp;a&nbsp;bool,&nbsp;not&nbsp;a&nbsp;SymPy&nbsp;value<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;1&nbsp;in&nbsp;Interval(0,&nbsp;2)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;_&nbsp;is&nbsp;S.true<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-intersect"><strong>intersect</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;the&nbsp;intersection&nbsp;of&nbsp;'self'&nbsp;and&nbsp;'other'.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;3).<a href="#Relation-intersect">intersect</a>(Interval(1,&nbsp;2))<br>
+Interval(1,&nbsp;2)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;imageset,&nbsp;Lambda,&nbsp;symbols,&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;n,&nbsp;m&nbsp;=&nbsp;symbols('n&nbsp;m')<br>
+&gt;&gt;&gt;&nbsp;a&nbsp;=&nbsp;imageset(Lambda(n,&nbsp;2*n),&nbsp;S.Integers)<br>
+&gt;&gt;&gt;&nbsp;a.<a href="#Relation-intersect">intersect</a>(imageset(Lambda(m,&nbsp;2*m&nbsp;+&nbsp;1),&nbsp;S.Integers))<br>
+EmptySet</tt></dd></dl>
+
+<dl><dt><a name="Relation-intersection"><strong>intersection</strong></a>(self, other)</dt><dd><tt>Alias&nbsp;for&nbsp;:meth:`<a href="#Relation-intersect">intersect</a>()`</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_disjoint"><strong>is_disjoint</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;'self'&nbsp;and&nbsp;'other'&nbsp;are&nbsp;disjoint<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;2).<a href="#Relation-is_disjoint">is_disjoint</a>(Interval(1,&nbsp;2))<br>
+False<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;2).<a href="#Relation-is_disjoint">is_disjoint</a>(Interval(3,&nbsp;4))<br>
+True<br>
+&nbsp;<br>
+References<br>
+==========<br>
+&nbsp;<br>
+..&nbsp;[1]&nbsp;https://en.wikipedia.org/wiki/Disjoint_sets</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_proper_subset"><strong>is_proper_subset</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;'self'&nbsp;is&nbsp;a&nbsp;proper&nbsp;subset&nbsp;of&nbsp;'other'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;0.5).<a href="#Relation-is_proper_subset">is_proper_subset</a>(Interval(0,&nbsp;1))<br>
+True<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-is_proper_subset">is_proper_subset</a>(Interval(0,&nbsp;1))<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_proper_superset"><strong>is_proper_superset</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;'self'&nbsp;is&nbsp;a&nbsp;proper&nbsp;superset&nbsp;of&nbsp;'other'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-is_proper_superset">is_proper_superset</a>(Interval(0,&nbsp;0.5))<br>
+True<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-is_proper_superset">is_proper_superset</a>(Interval(0,&nbsp;1))<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_subset"><strong>is_subset</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;'self'&nbsp;is&nbsp;a&nbsp;subset&nbsp;of&nbsp;'other'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;0.5).<a href="#Relation-is_subset">is_subset</a>(Interval(0,&nbsp;1))<br>
+True<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-is_subset">is_subset</a>(Interval(0,&nbsp;1,&nbsp;left_open=True))<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_superset"><strong>is_superset</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;True&nbsp;if&nbsp;'self'&nbsp;is&nbsp;a&nbsp;superset&nbsp;of&nbsp;'other'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;0.5).<a href="#Relation-is_superset">is_superset</a>(Interval(0,&nbsp;1))<br>
+False<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-is_superset">is_superset</a>(Interval(0,&nbsp;1,&nbsp;left_open=True))<br>
+True</tt></dd></dl>
+
+<dl><dt><a name="Relation-isdisjoint"><strong>isdisjoint</strong></a>(self, other)</dt><dd><tt>Alias&nbsp;for&nbsp;:meth:`<a href="#Relation-is_disjoint">is_disjoint</a>()`</tt></dd></dl>
+
+<dl><dt><a name="Relation-issubset"><strong>issubset</strong></a>(self, other)</dt><dd><tt>Alias&nbsp;for&nbsp;:meth:`<a href="#Relation-is_subset">is_subset</a>()`</tt></dd></dl>
+
+<dl><dt><a name="Relation-issuperset"><strong>issuperset</strong></a>(self, other)</dt><dd><tt>Alias&nbsp;for&nbsp;:meth:`<a href="#Relation-is_superset">is_superset</a>()`</tt></dd></dl>
+
+<dl><dt><a name="Relation-powerset"><strong>powerset</strong></a>(self)</dt><dd><tt>Find&nbsp;the&nbsp;Power&nbsp;set&nbsp;of&nbsp;'self'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;EmptySet,&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>,&nbsp;Interval<br>
+&nbsp;<br>
+A&nbsp;power&nbsp;set&nbsp;of&nbsp;an&nbsp;empty&nbsp;set:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;A&nbsp;=&nbsp;EmptySet<br>
+&gt;&gt;&gt;&nbsp;A.<a href="#Relation-powerset">powerset</a>()<br>
+<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(EmptySet)<br>
+&nbsp;<br>
+A&nbsp;power&nbsp;set&nbsp;of&nbsp;a&nbsp;finite&nbsp;set:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;A&nbsp;=&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(1,&nbsp;2)<br>
+&gt;&gt;&gt;&nbsp;a,&nbsp;b,&nbsp;c&nbsp;=&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(1),&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(2),&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(1,&nbsp;2)<br>
+&gt;&gt;&gt;&nbsp;A.<a href="#Relation-powerset">powerset</a>()&nbsp;==&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(a,&nbsp;b,&nbsp;c,&nbsp;EmptySet)<br>
+True<br>
+&nbsp;<br>
+A&nbsp;power&nbsp;set&nbsp;of&nbsp;an&nbsp;interval:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;2).<a href="#Relation-powerset">powerset</a>()<br>
+PowerSet(Interval(1,&nbsp;2))<br>
+&nbsp;<br>
+References<br>
+==========<br>
+&nbsp;<br>
+..&nbsp;[1]&nbsp;https://en.wikipedia.org/wiki/Power_set</tt></dd></dl>
+
+<dl><dt><a name="Relation-symmetric_difference"><strong>symmetric_difference</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;symmetric&nbsp;difference&nbsp;of&nbsp;`self`&nbsp;and&nbsp;`other`.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;3).<a href="#Relation-symmetric_difference">symmetric_difference</a>(S.Reals)<br>
+Union(Interval.open(-oo,&nbsp;1),&nbsp;Interval.open(3,&nbsp;oo))<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;10).<a href="#Relation-symmetric_difference">symmetric_difference</a>(S.Reals)<br>
+Union(Interval.open(-oo,&nbsp;1),&nbsp;Interval.open(10,&nbsp;oo))<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;S,&nbsp;EmptySet<br>
+&gt;&gt;&gt;&nbsp;S.Reals.<a href="#Relation-symmetric_difference">symmetric_difference</a>(EmptySet)<br>
+Reals<br>
+&nbsp;<br>
+References<br>
+==========<br>
+..&nbsp;[1]&nbsp;https://en.wikipedia.org/wiki/Symmetric_difference</tt></dd></dl>
+
+<dl><dt><a name="Relation-union"><strong>union</strong></a>(self, other)</dt><dd><tt>Returns&nbsp;the&nbsp;union&nbsp;of&nbsp;'self'&nbsp;and&nbsp;'other'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+As&nbsp;a&nbsp;shortcut&nbsp;it&nbsp;is&nbsp;possible&nbsp;to&nbsp;use&nbsp;the&nbsp;'+'&nbsp;operator:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a><br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).<a href="#Relation-union">union</a>(Interval(2,&nbsp;3))<br>
+Union(Interval(0,&nbsp;1),&nbsp;Interval(2,&nbsp;3))<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1)&nbsp;+&nbsp;Interval(2,&nbsp;3)<br>
+Union(Interval(0,&nbsp;1),&nbsp;Interval(2,&nbsp;3))<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;2,&nbsp;True,&nbsp;True)&nbsp;+&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(2,&nbsp;3)<br>
+Union(<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(3),&nbsp;Interval.Lopen(1,&nbsp;2))<br>
+&nbsp;<br>
+Similarly&nbsp;it&nbsp;is&nbsp;possible&nbsp;to&nbsp;use&nbsp;the&nbsp;'-'&nbsp;operator&nbsp;for&nbsp;set&nbsp;differences:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;2)&nbsp;-&nbsp;Interval(0,&nbsp;1)<br>
+Interval.Lopen(1,&nbsp;2)<br>
+&gt;&gt;&gt;&nbsp;Interval(1,&nbsp;3)&nbsp;-&nbsp;<a href="sympy.sets.sets.html#FiniteSet">FiniteSet</a>(2)<br>
+Union(Interval.Ropen(1,&nbsp;2),&nbsp;Interval.Lopen(2,&nbsp;3))</tt></dd></dl>
+
+<hr>
+Readonly properties inherited from <a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a>:<br>
+<dl><dt><strong>boundary</strong></dt>
+<dd><tt>The&nbsp;boundary&nbsp;or&nbsp;frontier&nbsp;of&nbsp;a&nbsp;set<br>
+&nbsp;<br>
+A&nbsp;point&nbsp;x&nbsp;is&nbsp;on&nbsp;the&nbsp;boundary&nbsp;of&nbsp;a&nbsp;set&nbsp;S&nbsp;if<br>
+&nbsp;<br>
+1.&nbsp;&nbsp;x&nbsp;is&nbsp;in&nbsp;the&nbsp;closure&nbsp;of&nbsp;S.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I.e.&nbsp;Every&nbsp;neighborhood&nbsp;of&nbsp;x&nbsp;contains&nbsp;a&nbsp;point&nbsp;in&nbsp;S.<br>
+2.&nbsp;&nbsp;x&nbsp;is&nbsp;not&nbsp;in&nbsp;the&nbsp;interior&nbsp;of&nbsp;S.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I.e.&nbsp;There&nbsp;does&nbsp;not&nbsp;exist&nbsp;an&nbsp;open&nbsp;set&nbsp;centered&nbsp;on&nbsp;x&nbsp;contained<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entirely&nbsp;within&nbsp;S.<br>
+&nbsp;<br>
+There&nbsp;are&nbsp;the&nbsp;points&nbsp;on&nbsp;the&nbsp;outer&nbsp;rim&nbsp;of&nbsp;S.&nbsp;&nbsp;If&nbsp;S&nbsp;is&nbsp;open&nbsp;then&nbsp;these<br>
+points&nbsp;need&nbsp;not&nbsp;actually&nbsp;be&nbsp;contained&nbsp;within&nbsp;S.<br>
+&nbsp;<br>
+For&nbsp;example,&nbsp;the&nbsp;boundary&nbsp;of&nbsp;an&nbsp;interval&nbsp;is&nbsp;its&nbsp;start&nbsp;and&nbsp;end&nbsp;points.<br>
+This&nbsp;is&nbsp;true&nbsp;regardless&nbsp;of&nbsp;whether&nbsp;or&nbsp;not&nbsp;the&nbsp;interval&nbsp;is&nbsp;open.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).boundary<br>
+FiniteSet(0,&nbsp;1)<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1,&nbsp;True,&nbsp;False).boundary<br>
+FiniteSet(0,&nbsp;1)</tt></dd>
+</dl>
+<dl><dt><strong>closure</strong></dt>
+<dd><tt>Property&nbsp;method&nbsp;which&nbsp;returns&nbsp;the&nbsp;closure&nbsp;of&nbsp;a&nbsp;set.<br>
+The&nbsp;closure&nbsp;is&nbsp;defined&nbsp;as&nbsp;the&nbsp;union&nbsp;of&nbsp;the&nbsp;set&nbsp;itself&nbsp;and&nbsp;its<br>
+boundary.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;S,&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;S.Reals.closure<br>
+Reals<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).closure<br>
+Interval(0,&nbsp;1)</tt></dd>
+</dl>
+<dl><dt><strong>inf</strong></dt>
+<dd><tt>The&nbsp;infimum&nbsp;of&nbsp;'self'<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;Union<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).inf<br>
+0<br>
+&gt;&gt;&gt;&nbsp;Union(Interval(0,&nbsp;1),&nbsp;Interval(2,&nbsp;3)).inf<br>
+0</tt></dd>
+</dl>
+<dl><dt><strong>interior</strong></dt>
+<dd><tt>Property&nbsp;method&nbsp;which&nbsp;returns&nbsp;the&nbsp;interior&nbsp;of&nbsp;a&nbsp;set.<br>
+The&nbsp;interior&nbsp;of&nbsp;a&nbsp;set&nbsp;S&nbsp;consists&nbsp;all&nbsp;points&nbsp;of&nbsp;S&nbsp;that&nbsp;do&nbsp;not<br>
+belong&nbsp;to&nbsp;the&nbsp;boundary&nbsp;of&nbsp;S.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).interior<br>
+Interval.open(0,&nbsp;1)<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).boundary.interior<br>
+EmptySet</tt></dd>
+</dl>
+<dl><dt><strong>is_EmptySet</strong></dt>
+</dl>
+<dl><dt><strong>is_closed</strong></dt>
+<dd><tt>A&nbsp;property&nbsp;method&nbsp;to&nbsp;check&nbsp;whether&nbsp;a&nbsp;set&nbsp;is&nbsp;closed.<br>
+&nbsp;<br>
+A&nbsp;set&nbsp;is&nbsp;closed&nbsp;if&nbsp;its&nbsp;complement&nbsp;is&nbsp;an&nbsp;open&nbsp;set.&nbsp;The&nbsp;closedness&nbsp;of&nbsp;a<br>
+subset&nbsp;of&nbsp;the&nbsp;reals&nbsp;is&nbsp;determined&nbsp;with&nbsp;respect&nbsp;to&nbsp;R&nbsp;and&nbsp;its&nbsp;standard<br>
+topology.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).is_closed<br>
+True</tt></dd>
+</dl>
+<dl><dt><strong>is_open</strong></dt>
+<dd><tt>Property&nbsp;method&nbsp;to&nbsp;check&nbsp;whether&nbsp;a&nbsp;set&nbsp;is&nbsp;open.<br>
+&nbsp;<br>
+A&nbsp;set&nbsp;is&nbsp;open&nbsp;if&nbsp;and&nbsp;only&nbsp;if&nbsp;it&nbsp;has&nbsp;an&nbsp;empty&nbsp;intersection&nbsp;with&nbsp;its<br>
+boundary.&nbsp;In&nbsp;particular,&nbsp;a&nbsp;subset&nbsp;A&nbsp;of&nbsp;the&nbsp;reals&nbsp;is&nbsp;open&nbsp;if&nbsp;and&nbsp;only<br>
+if&nbsp;each&nbsp;one&nbsp;of&nbsp;its&nbsp;points&nbsp;is&nbsp;contained&nbsp;in&nbsp;an&nbsp;open&nbsp;interval&nbsp;that&nbsp;is&nbsp;a<br>
+subset&nbsp;of&nbsp;A.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;S.Reals.is_open<br>
+True<br>
+&gt;&gt;&gt;&nbsp;S.Rationals.is_open<br>
+False</tt></dd>
+</dl>
+<dl><dt><strong>sup</strong></dt>
+<dd><tt>The&nbsp;supremum&nbsp;of&nbsp;'self'<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Interval,&nbsp;Union<br>
+&gt;&gt;&gt;&nbsp;Interval(0,&nbsp;1).sup<br>
+1<br>
+&gt;&gt;&gt;&nbsp;Union(Interval(0,&nbsp;1),&nbsp;Interval(2,&nbsp;3)).sup<br>
+3</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="sympy.sets.sets.html#Set">sympy.sets.sets.Set</a>:<br>
+<dl><dt><strong>is_Complement</strong> = None</dl>
+
+<dl><dt><strong>is_ComplexRegion</strong> = False</dl>
+
+<dl><dt><strong>is_Intersection</strong> = None</dl>
+
+<dl><dt><strong>is_Interval</strong> = False</dl>
+
+<dl><dt><strong>is_ProductSet</strong> = False</dl>
+
+<dl><dt><strong>is_Union</strong> = False</dl>
+
+<dl><dt><strong>is_UniversalSet</strong> = None</dl>
+
+<dl><dt><strong>is_interval</strong> = False</dl>
+
+<dl><dt><strong>is_number</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="sympy.core.basic.html#Basic">sympy.core.basic.Basic</a>:<br>
+<dl><dt><a name="Relation-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><tt>Return&nbsp;a&nbsp;boolean&nbsp;indicating&nbsp;whether&nbsp;a&nbsp;==&nbsp;b&nbsp;on&nbsp;the&nbsp;basis&nbsp;of<br>
+their&nbsp;symbolic&nbsp;trees.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;a.<a href="#Relation-compare">compare</a>(b)&nbsp;==&nbsp;0&nbsp;but&nbsp;faster.<br>
+&nbsp;<br>
+Notes<br>
+=====<br>
+&nbsp;<br>
+If&nbsp;a&nbsp;class&nbsp;that&nbsp;overrides&nbsp;<a href="#Relation-__eq__">__eq__</a>()&nbsp;needs&nbsp;to&nbsp;retain&nbsp;the<br>
+implementation&nbsp;of&nbsp;<a href="#Relation-__hash__">__hash__</a>()&nbsp;from&nbsp;a&nbsp;parent&nbsp;class,&nbsp;the<br>
+interpreter&nbsp;must&nbsp;be&nbsp;told&nbsp;this&nbsp;explicitly&nbsp;by&nbsp;setting&nbsp;__hash__&nbsp;=<br>
+&lt;ParentClass&gt;.__hash__.&nbsp;Otherwise&nbsp;the&nbsp;inheritance&nbsp;of&nbsp;<a href="#Relation-__hash__">__hash__</a>()<br>
+will&nbsp;be&nbsp;blocked,&nbsp;just&nbsp;as&nbsp;if&nbsp;__hash__&nbsp;had&nbsp;been&nbsp;explicitly&nbsp;set&nbsp;to<br>
+None.<br>
+&nbsp;<br>
+References<br>
+==========<br>
+&nbsp;<br>
+from&nbsp;<a href="http://docs.python.org/dev/reference/datamodel.html#object.__hash__">http://docs.python.org/dev/reference/datamodel.html#object.__hash__</a></tt></dd></dl>
+
+<dl><dt><a name="Relation-__getnewargs__"><strong>__getnewargs__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-__getstate__"><strong>__getstate__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="Relation-__ne__"><strong>__ne__</strong></a>(self, other)</dt><dd><tt>``a&nbsp;!=&nbsp;b``&nbsp;&nbsp;-&gt;&nbsp;Compare&nbsp;two&nbsp;symbolic&nbsp;trees&nbsp;and&nbsp;see&nbsp;whether&nbsp;they&nbsp;are&nbsp;different<br>
+&nbsp;<br>
+this&nbsp;is&nbsp;the&nbsp;same&nbsp;as:<br>
+&nbsp;<br>
+``a.<a href="#Relation-compare">compare</a>(b)&nbsp;!=&nbsp;0``<br>
+&nbsp;<br>
+but&nbsp;faster</tt></dd></dl>
+
+<dl><dt><a name="Relation-__reduce_ex__"><strong>__reduce_ex__</strong></a>(self, proto)</dt><dd><tt>Pickling&nbsp;support.</tt></dd></dl>
+
+<dl><dt><a name="Relation-__setstate__"><strong>__setstate__</strong></a>(self, state)</dt></dl>
+
+<dl><dt><a name="Relation-as_content_primitive"><strong>as_content_primitive</strong></a>(self, radical=False, clear=True)</dt><dd><tt>A&nbsp;stub&nbsp;to&nbsp;allow&nbsp;Basic&nbsp;args&nbsp;(like&nbsp;Tuple)&nbsp;to&nbsp;be&nbsp;skipped&nbsp;when&nbsp;computing<br>
+the&nbsp;content&nbsp;and&nbsp;primitive&nbsp;components&nbsp;of&nbsp;an&nbsp;expression.<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+========<br>
+&nbsp;<br>
+sympy.core.expr.Expr.as_content_primitive</tt></dd></dl>
+
+<dl><dt><a name="Relation-as_dummy"><strong>as_dummy</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;expression&nbsp;with&nbsp;any&nbsp;objects&nbsp;having&nbsp;structurally<br>
+bound&nbsp;symbols&nbsp;replaced&nbsp;with&nbsp;unique,&nbsp;canonical&nbsp;symbols&nbsp;within<br>
+the&nbsp;object&nbsp;in&nbsp;which&nbsp;they&nbsp;appear&nbsp;and&nbsp;having&nbsp;only&nbsp;the&nbsp;default<br>
+assumption&nbsp;for&nbsp;commutativity&nbsp;being&nbsp;True.&nbsp;When&nbsp;applied&nbsp;to&nbsp;a<br>
+symbol&nbsp;a&nbsp;new&nbsp;symbol&nbsp;having&nbsp;only&nbsp;the&nbsp;same&nbsp;commutativity&nbsp;will&nbsp;be<br>
+returned.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Integral,&nbsp;Symbol<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&gt;&gt;&gt;&nbsp;r&nbsp;=&nbsp;Symbol('r',&nbsp;real=True)<br>
+&gt;&gt;&gt;&nbsp;Integral(r,&nbsp;(r,&nbsp;x)).<a href="#Relation-as_dummy">as_dummy</a>()<br>
+Integral(_0,&nbsp;(_0,&nbsp;x))<br>
+&gt;&gt;&gt;&nbsp;_.variables[0].is_real&nbsp;is&nbsp;None<br>
+True<br>
+&gt;&gt;&gt;&nbsp;r.<a href="#Relation-as_dummy">as_dummy</a>()<br>
+_r<br>
+&nbsp;<br>
+Notes<br>
+=====<br>
+&nbsp;<br>
+Any&nbsp;object&nbsp;that&nbsp;has&nbsp;structurally&nbsp;bound&nbsp;variables&nbsp;should&nbsp;have<br>
+a&nbsp;property,&nbsp;`bound_symbols`&nbsp;that&nbsp;returns&nbsp;those&nbsp;symbols<br>
+appearing&nbsp;in&nbsp;the&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="Relation-atoms"><strong>atoms</strong></a>(self, *types)</dt><dd><tt>Returns&nbsp;the&nbsp;atoms&nbsp;that&nbsp;form&nbsp;the&nbsp;current&nbsp;object.<br>
+&nbsp;<br>
+By&nbsp;default,&nbsp;only&nbsp;objects&nbsp;that&nbsp;are&nbsp;truly&nbsp;atomic&nbsp;and&nbsp;can't<br>
+be&nbsp;divided&nbsp;into&nbsp;smaller&nbsp;pieces&nbsp;are&nbsp;returned:&nbsp;symbols,&nbsp;numbers,<br>
+and&nbsp;number&nbsp;symbols&nbsp;like&nbsp;I&nbsp;and&nbsp;pi.&nbsp;It&nbsp;is&nbsp;possible&nbsp;to&nbsp;request<br>
+atoms&nbsp;of&nbsp;any&nbsp;type,&nbsp;however,&nbsp;as&nbsp;demonstrated&nbsp;below.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;I,&nbsp;pi,&nbsp;sin<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>()<br>
+{1,&nbsp;2,&nbsp;I,&nbsp;pi,&nbsp;x,&nbsp;y}<br>
+&nbsp;<br>
+If&nbsp;one&nbsp;or&nbsp;more&nbsp;types&nbsp;are&nbsp;given,&nbsp;the&nbsp;results&nbsp;will&nbsp;contain&nbsp;only<br>
+those&nbsp;types&nbsp;of&nbsp;atoms.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Number,&nbsp;NumberSymbol,&nbsp;Symbol<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Symbol)<br>
+{x,&nbsp;y}<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Number)<br>
+{1,&nbsp;2}<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Number,&nbsp;NumberSymbol)<br>
+{1,&nbsp;2,&nbsp;pi}<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Number,&nbsp;NumberSymbol,&nbsp;I)<br>
+{1,&nbsp;2,&nbsp;I,&nbsp;pi}<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;I&nbsp;(imaginary&nbsp;unit)&nbsp;and&nbsp;zoo&nbsp;(complex&nbsp;infinity)&nbsp;are&nbsp;special<br>
+types&nbsp;of&nbsp;number&nbsp;symbols&nbsp;and&nbsp;are&nbsp;not&nbsp;part&nbsp;of&nbsp;the&nbsp;NumberSymbol&nbsp;class.<br>
+&nbsp;<br>
+The&nbsp;type&nbsp;can&nbsp;be&nbsp;given&nbsp;implicitly,&nbsp;too:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(x)&nbsp;#&nbsp;x&nbsp;is&nbsp;a&nbsp;Symbol<br>
+{x,&nbsp;y}<br>
+&nbsp;<br>
+Be&nbsp;careful&nbsp;to&nbsp;check&nbsp;your&nbsp;assumptions&nbsp;when&nbsp;using&nbsp;the&nbsp;implicit&nbsp;option<br>
+since&nbsp;``S(1).is_Integer&nbsp;=&nbsp;True``&nbsp;but&nbsp;``type(S(1))``&nbsp;is&nbsp;``One``,&nbsp;a&nbsp;special&nbsp;type<br>
+of&nbsp;sympy&nbsp;atom,&nbsp;while&nbsp;``type(S(2))``&nbsp;is&nbsp;type&nbsp;``Integer``&nbsp;and&nbsp;will&nbsp;find&nbsp;all<br>
+integers&nbsp;in&nbsp;an&nbsp;expression:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;S<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(S(1))<br>
+{1}<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(S(2))<br>
+{1,&nbsp;2}<br>
+&nbsp;<br>
+Finally,&nbsp;arguments&nbsp;to&nbsp;<a href="#Relation-atoms">atoms</a>()&nbsp;can&nbsp;select&nbsp;more&nbsp;than&nbsp;atomic&nbsp;atoms:&nbsp;any<br>
+sympy&nbsp;type&nbsp;(loaded&nbsp;in&nbsp;core/__init__.py)&nbsp;can&nbsp;be&nbsp;listed&nbsp;as&nbsp;an&nbsp;argument<br>
+and&nbsp;those&nbsp;types&nbsp;of&nbsp;"atoms"&nbsp;as&nbsp;found&nbsp;in&nbsp;scanning&nbsp;the&nbsp;arguments&nbsp;of&nbsp;the<br>
+expression&nbsp;recursively:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Function,&nbsp;Mul<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.core.function&nbsp;import&nbsp;AppliedUndef<br>
+&gt;&gt;&gt;&nbsp;f&nbsp;=&nbsp;Function('f')<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;f(x)&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Function)<br>
+{f(x),&nbsp;sin(y&nbsp;+&nbsp;I*pi)}<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;f(x)&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(AppliedUndef)<br>
+{f(x)}<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x&nbsp;+&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)).<a href="#Relation-atoms">atoms</a>(Mul)<br>
+{I*pi,&nbsp;2*sin(y&nbsp;+&nbsp;I*pi)}</tt></dd></dl>
+
+<dl><dt><a name="Relation-copy"><strong>copy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-count"><strong>count</strong></a>(self, query)</dt><dd><tt>Count&nbsp;the&nbsp;number&nbsp;of&nbsp;matching&nbsp;subexpressions.</tt></dd></dl>
+
+<dl><dt><a name="Relation-count_ops"><strong>count_ops</strong></a>(self, visual=None)</dt><dd><tt>wrapper&nbsp;for&nbsp;count_ops&nbsp;that&nbsp;returns&nbsp;the&nbsp;operation&nbsp;count.</tt></dd></dl>
+
+<dl><dt><a name="Relation-doit"><strong>doit</strong></a>(self, **hints)</dt><dd><tt>Evaluate&nbsp;objects&nbsp;that&nbsp;are&nbsp;not&nbsp;evaluated&nbsp;by&nbsp;default&nbsp;like&nbsp;limits,<br>
+integrals,&nbsp;sums&nbsp;and&nbsp;products.&nbsp;All&nbsp;objects&nbsp;of&nbsp;this&nbsp;kind&nbsp;will&nbsp;be<br>
+evaluated&nbsp;recursively,&nbsp;unless&nbsp;some&nbsp;species&nbsp;were&nbsp;excluded&nbsp;via&nbsp;'hints'<br>
+or&nbsp;unless&nbsp;the&nbsp;'deep'&nbsp;hint&nbsp;was&nbsp;set&nbsp;to&nbsp;'False'.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Integral<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;2*Integral(x,&nbsp;x)<br>
+2*Integral(x,&nbsp;x)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(2*Integral(x,&nbsp;x)).<a href="#Relation-doit">doit</a>()<br>
+x**2<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(2*Integral(x,&nbsp;x)).<a href="#Relation-doit">doit</a>(deep=False)<br>
+2*Integral(x,&nbsp;x)</tt></dd></dl>
+
+<dl><dt><a name="Relation-dummy_eq"><strong>dummy_eq</strong></a>(self, other, symbol=None)</dt><dd><tt>Compare&nbsp;two&nbsp;expressions&nbsp;and&nbsp;handle&nbsp;dummy&nbsp;symbols.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Dummy<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;u&nbsp;=&nbsp;Dummy('u')<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(u**2&nbsp;+&nbsp;1).<a href="#Relation-dummy_eq">dummy_eq</a>(x**2&nbsp;+&nbsp;1)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;(u**2&nbsp;+&nbsp;1)&nbsp;==&nbsp;(x**2&nbsp;+&nbsp;1)<br>
+False<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(u**2&nbsp;+&nbsp;y).<a href="#Relation-dummy_eq">dummy_eq</a>(x**2&nbsp;+&nbsp;y,&nbsp;x)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;(u**2&nbsp;+&nbsp;y).<a href="#Relation-dummy_eq">dummy_eq</a>(x**2&nbsp;+&nbsp;y,&nbsp;y)<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-find"><strong>find</strong></a>(self, query, group=False)</dt><dd><tt>Find&nbsp;all&nbsp;subexpressions&nbsp;matching&nbsp;a&nbsp;query.</tt></dd></dl>
+
+<dl><dt><a name="Relation-has"><strong>has</strong></a>(self, *patterns)</dt><dd><tt>Test&nbsp;whether&nbsp;any&nbsp;subexpression&nbsp;matches&nbsp;any&nbsp;of&nbsp;the&nbsp;patterns.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;sin<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y,&nbsp;z<br>
+&gt;&gt;&gt;&nbsp;(x**2&nbsp;+&nbsp;sin(x*y)).<a href="#Relation-has">has</a>(z)<br>
+False<br>
+&gt;&gt;&gt;&nbsp;(x**2&nbsp;+&nbsp;sin(x*y)).<a href="#Relation-has">has</a>(x,&nbsp;y,&nbsp;z)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;x.<a href="#Relation-has">has</a>(x)<br>
+True<br>
+&nbsp;<br>
+Note&nbsp;``has``&nbsp;is&nbsp;a&nbsp;structural&nbsp;algorithm&nbsp;with&nbsp;no&nbsp;knowledge&nbsp;of<br>
+mathematics.&nbsp;Consider&nbsp;the&nbsp;following&nbsp;half-open&nbsp;interval:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.sets&nbsp;import&nbsp;Interval<br>
+&gt;&gt;&gt;&nbsp;i&nbsp;=&nbsp;Interval.Lopen(0,&nbsp;5);&nbsp;i<br>
+Interval.Lopen(0,&nbsp;5)<br>
+&gt;&gt;&gt;&nbsp;i.args<br>
+(0,&nbsp;5,&nbsp;True,&nbsp;False)<br>
+&gt;&gt;&gt;&nbsp;i.<a href="#Relation-has">has</a>(4)&nbsp;&nbsp;#&nbsp;there&nbsp;is&nbsp;no&nbsp;"4"&nbsp;in&nbsp;the&nbsp;arguments<br>
+False<br>
+&gt;&gt;&gt;&nbsp;i.<a href="#Relation-has">has</a>(0)&nbsp;&nbsp;#&nbsp;there&nbsp;*is*&nbsp;a&nbsp;"0"&nbsp;in&nbsp;the&nbsp;arguments<br>
+True<br>
+&nbsp;<br>
+Instead,&nbsp;use&nbsp;``contains``&nbsp;to&nbsp;determine&nbsp;whether&nbsp;a&nbsp;number&nbsp;is&nbsp;in&nbsp;the<br>
+interval&nbsp;or&nbsp;not:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;i.<a href="#Relation-contains">contains</a>(4)<br>
+True<br>
+&gt;&gt;&gt;&nbsp;i.<a href="#Relation-contains">contains</a>(0)<br>
+False<br>
+&nbsp;<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;``expr.<a href="#Relation-has">has</a>(*patterns)``&nbsp;is&nbsp;exactly&nbsp;equivalent&nbsp;to<br>
+``any(expr.<a href="#Relation-has">has</a>(p)&nbsp;for&nbsp;p&nbsp;in&nbsp;patterns)``.&nbsp;In&nbsp;particular,&nbsp;``False``&nbsp;is<br>
+returned&nbsp;when&nbsp;the&nbsp;list&nbsp;of&nbsp;patterns&nbsp;is&nbsp;empty.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;x.<a href="#Relation-has">has</a>()<br>
+False</tt></dd></dl>
+
+<dl><dt><a name="Relation-is_hypergeometric"><strong>is_hypergeometric</strong></a>(self, k)</dt></dl>
+
+<dl><dt><a name="Relation-match"><strong>match</strong></a>(self, pattern, old=False)</dt><dd><tt>Pattern&nbsp;matching.<br>
+&nbsp;<br>
+Wild&nbsp;symbols&nbsp;match&nbsp;all.<br>
+&nbsp;<br>
+Return&nbsp;``None``&nbsp;when&nbsp;expression&nbsp;(self)&nbsp;does&nbsp;not&nbsp;match<br>
+with&nbsp;pattern.&nbsp;Otherwise&nbsp;return&nbsp;a&nbsp;dictionary&nbsp;such&nbsp;that::<br>
+&nbsp;<br>
+&nbsp;&nbsp;pattern.<a href="#Relation-xreplace">xreplace</a>(self.<a href="#Relation-match">match</a>(pattern))&nbsp;==&nbsp;self<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Wild,&nbsp;Sum<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&gt;&gt;&gt;&nbsp;p&nbsp;=&nbsp;Wild("p")<br>
+&gt;&gt;&gt;&nbsp;q&nbsp;=&nbsp;Wild("q")<br>
+&gt;&gt;&gt;&nbsp;r&nbsp;=&nbsp;Wild("r")<br>
+&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;(x+y)**(x+y)<br>
+&gt;&gt;&gt;&nbsp;e.<a href="#Relation-match">match</a>(p**p)<br>
+{p_:&nbsp;x&nbsp;+&nbsp;y}<br>
+&gt;&gt;&gt;&nbsp;e.<a href="#Relation-match">match</a>(p**q)<br>
+{p_:&nbsp;x&nbsp;+&nbsp;y,&nbsp;q_:&nbsp;x&nbsp;+&nbsp;y}<br>
+&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;(2*x)**2<br>
+&gt;&gt;&gt;&nbsp;e.<a href="#Relation-match">match</a>(p*q**r)<br>
+{p_:&nbsp;4,&nbsp;q_:&nbsp;x,&nbsp;r_:&nbsp;2}<br>
+&gt;&gt;&gt;&nbsp;(p*q**r).<a href="#Relation-xreplace">xreplace</a>(e.<a href="#Relation-match">match</a>(p*q**r))<br>
+4*x**2<br>
+&nbsp;<br>
+Structurally&nbsp;bound&nbsp;symbols&nbsp;are&nbsp;ignored&nbsp;during&nbsp;matching:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Sum(x,&nbsp;(x,&nbsp;1,&nbsp;2)).<a href="#Relation-match">match</a>(Sum(y,&nbsp;(y,&nbsp;1,&nbsp;p)))<br>
+{p_:&nbsp;2}<br>
+&nbsp;<br>
+But&nbsp;they&nbsp;can&nbsp;be&nbsp;identified&nbsp;if&nbsp;desired:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Sum(x,&nbsp;(x,&nbsp;1,&nbsp;2)).<a href="#Relation-match">match</a>(Sum(q,&nbsp;(q,&nbsp;1,&nbsp;p)))<br>
+{p_:&nbsp;2,&nbsp;q_:&nbsp;x}<br>
+&nbsp;<br>
+The&nbsp;``old``&nbsp;flag&nbsp;will&nbsp;give&nbsp;the&nbsp;old-style&nbsp;pattern&nbsp;matching&nbsp;where<br>
+expressions&nbsp;and&nbsp;patterns&nbsp;are&nbsp;essentially&nbsp;solved&nbsp;to&nbsp;give&nbsp;the<br>
+match.&nbsp;Both&nbsp;of&nbsp;the&nbsp;following&nbsp;give&nbsp;None&nbsp;unless&nbsp;``old=True``:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;-&nbsp;2).<a href="#Relation-match">match</a>(p&nbsp;-&nbsp;x,&nbsp;old=True)<br>
+{p_:&nbsp;2*x&nbsp;-&nbsp;2}<br>
+&gt;&gt;&gt;&nbsp;(2/x).<a href="#Relation-match">match</a>(p*x,&nbsp;old=True)<br>
+{p_:&nbsp;2/x**2}</tt></dd></dl>
+
+<dl><dt><a name="Relation-matches"><strong>matches</strong></a>(self, expr, repl_dict={}, old=False)</dt><dd><tt>Helper&nbsp;method&nbsp;for&nbsp;<a href="#Relation-match">match</a>()&nbsp;that&nbsp;looks&nbsp;for&nbsp;a&nbsp;match&nbsp;between&nbsp;Wild&nbsp;symbols<br>
+in&nbsp;self&nbsp;and&nbsp;expressions&nbsp;in&nbsp;expr.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;symbols,&nbsp;Wild,&nbsp;Basic<br>
+&gt;&gt;&gt;&nbsp;a,&nbsp;b,&nbsp;c&nbsp;=&nbsp;symbols('a&nbsp;b&nbsp;c')<br>
+&gt;&gt;&gt;&nbsp;x&nbsp;=&nbsp;Wild('x')<br>
+&gt;&gt;&gt;&nbsp;Basic(a&nbsp;+&nbsp;x,&nbsp;x).<a href="#Relation-matches">matches</a>(Basic(a&nbsp;+&nbsp;b,&nbsp;c))&nbsp;is&nbsp;None<br>
+True<br>
+&gt;&gt;&gt;&nbsp;Basic(a&nbsp;+&nbsp;x,&nbsp;x).<a href="#Relation-matches">matches</a>(Basic(a&nbsp;+&nbsp;b&nbsp;+&nbsp;c,&nbsp;b&nbsp;+&nbsp;c))<br>
+{x_:&nbsp;b&nbsp;+&nbsp;c}</tt></dd></dl>
+
+<dl><dt><a name="Relation-rcall"><strong>rcall</strong></a>(self, *args)</dt><dd><tt>Apply&nbsp;on&nbsp;the&nbsp;argument&nbsp;recursively&nbsp;through&nbsp;the&nbsp;expression&nbsp;tree.<br>
+&nbsp;<br>
+This&nbsp;method&nbsp;is&nbsp;used&nbsp;to&nbsp;simulate&nbsp;a&nbsp;common&nbsp;abuse&nbsp;of&nbsp;notation&nbsp;for<br>
+operators.&nbsp;For&nbsp;instance&nbsp;in&nbsp;SymPy&nbsp;the&nbsp;the&nbsp;following&nbsp;will&nbsp;not&nbsp;work:<br>
+&nbsp;<br>
+``(x+Lambda(y,&nbsp;2*y))(z)&nbsp;==&nbsp;x+2*z``,<br>
+&nbsp;<br>
+however&nbsp;you&nbsp;can&nbsp;use<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Lambda<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y,&nbsp;z<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;Lambda(y,&nbsp;2*y)).<a href="#Relation-rcall">rcall</a>(z)<br>
+x&nbsp;+&nbsp;2*z</tt></dd></dl>
+
+<dl><dt><a name="Relation-replace"><strong>replace</strong></a>(self, query, value, map=False, simultaneous=True, exact=None)</dt><dd><tt>Replace&nbsp;matching&nbsp;subexpressions&nbsp;of&nbsp;``self``&nbsp;with&nbsp;``value``.<br>
+&nbsp;<br>
+If&nbsp;``map&nbsp;=&nbsp;True``&nbsp;then&nbsp;also&nbsp;return&nbsp;the&nbsp;mapping&nbsp;{old:&nbsp;new}&nbsp;where&nbsp;``old``<br>
+was&nbsp;a&nbsp;sub-expression&nbsp;found&nbsp;with&nbsp;query&nbsp;and&nbsp;``new``&nbsp;is&nbsp;the&nbsp;replacement<br>
+value&nbsp;for&nbsp;it.&nbsp;If&nbsp;the&nbsp;expression&nbsp;itself&nbsp;doesn't&nbsp;match&nbsp;the&nbsp;query,&nbsp;then<br>
+the&nbsp;returned&nbsp;value&nbsp;will&nbsp;be&nbsp;``self.<a href="#Relation-xreplace">xreplace</a>(map)``&nbsp;otherwise&nbsp;it&nbsp;should<br>
+be&nbsp;``self.<a href="#Relation-subs">subs</a>(ordered(map.items()))``.<br>
+&nbsp;<br>
+Traverses&nbsp;an&nbsp;expression&nbsp;tree&nbsp;and&nbsp;performs&nbsp;replacement&nbsp;of&nbsp;matching<br>
+subexpressions&nbsp;from&nbsp;the&nbsp;bottom&nbsp;to&nbsp;the&nbsp;top&nbsp;of&nbsp;the&nbsp;tree.&nbsp;The&nbsp;default<br>
+approach&nbsp;is&nbsp;to&nbsp;do&nbsp;the&nbsp;replacement&nbsp;in&nbsp;a&nbsp;simultaneous&nbsp;fashion&nbsp;so<br>
+changes&nbsp;made&nbsp;are&nbsp;targeted&nbsp;only&nbsp;once.&nbsp;If&nbsp;this&nbsp;is&nbsp;not&nbsp;desired&nbsp;or&nbsp;causes<br>
+problems,&nbsp;``simultaneous``&nbsp;can&nbsp;be&nbsp;set&nbsp;to&nbsp;False.<br>
+&nbsp;<br>
+In&nbsp;addition,&nbsp;if&nbsp;an&nbsp;expression&nbsp;containing&nbsp;more&nbsp;than&nbsp;one&nbsp;Wild&nbsp;symbol<br>
+is&nbsp;being&nbsp;used&nbsp;to&nbsp;match&nbsp;subexpressions&nbsp;and&nbsp;the&nbsp;``exact``&nbsp;flag&nbsp;is&nbsp;None<br>
+it&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;True&nbsp;so&nbsp;the&nbsp;match&nbsp;will&nbsp;only&nbsp;succeed&nbsp;if&nbsp;all&nbsp;non-zero<br>
+values&nbsp;are&nbsp;received&nbsp;for&nbsp;each&nbsp;Wild&nbsp;that&nbsp;appears&nbsp;in&nbsp;the&nbsp;match&nbsp;pattern.<br>
+Setting&nbsp;this&nbsp;to&nbsp;False&nbsp;accepts&nbsp;a&nbsp;match&nbsp;of&nbsp;0;&nbsp;while&nbsp;setting&nbsp;it&nbsp;True<br>
+accepts&nbsp;all&nbsp;matches&nbsp;that&nbsp;have&nbsp;a&nbsp;0&nbsp;in&nbsp;them.&nbsp;See&nbsp;example&nbsp;below&nbsp;for<br>
+cautions.<br>
+&nbsp;<br>
+The&nbsp;list&nbsp;of&nbsp;possible&nbsp;combinations&nbsp;of&nbsp;queries&nbsp;and&nbsp;replacement&nbsp;values<br>
+is&nbsp;listed&nbsp;below:<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+Initial&nbsp;setup<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;log,&nbsp;sin,&nbsp;cos,&nbsp;tan,&nbsp;Wild,&nbsp;Mul,&nbsp;Add<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&gt;&gt;&gt;&nbsp;f&nbsp;=&nbsp;log(sin(x))&nbsp;+&nbsp;tan(sin(x**2))<br>
+&nbsp;<br>
+1.1.&nbsp;type&nbsp;-&gt;&nbsp;type<br>
+&nbsp;&nbsp;&nbsp;&nbsp;obj.<a href="#Relation-replace">replace</a>(type,&nbsp;newtype)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;object&nbsp;of&nbsp;type&nbsp;``type``&nbsp;is&nbsp;found,&nbsp;replace&nbsp;it&nbsp;with&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;of&nbsp;passing&nbsp;its&nbsp;argument(s)&nbsp;to&nbsp;``newtype``.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin,&nbsp;cos)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(cos(x))&nbsp;+&nbsp;tan(cos(x**2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;sin(x).<a href="#Relation-replace">replace</a>(sin,&nbsp;cos,&nbsp;map=True)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(cos(x),&nbsp;{sin(x):&nbsp;cos(x)})<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(x*y).<a href="#Relation-replace">replace</a>(Mul,&nbsp;Add)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;+&nbsp;y<br>
+&nbsp;<br>
+1.2.&nbsp;type&nbsp;-&gt;&nbsp;func<br>
+&nbsp;&nbsp;&nbsp;&nbsp;obj.<a href="#Relation-replace">replace</a>(type,&nbsp;func)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;object&nbsp;of&nbsp;type&nbsp;``type``&nbsp;is&nbsp;found,&nbsp;apply&nbsp;``func``&nbsp;to&nbsp;its<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argument(s).&nbsp;``func``&nbsp;must&nbsp;be&nbsp;written&nbsp;to&nbsp;handle&nbsp;the&nbsp;number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;arguments&nbsp;of&nbsp;``type``.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin,&nbsp;lambda&nbsp;arg:&nbsp;sin(2*arg))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(sin(2*x))&nbsp;+&nbsp;tan(sin(2*x**2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(x*y).<a href="#Relation-replace">replace</a>(Mul,&nbsp;lambda&nbsp;*args:&nbsp;sin(2*Mul(*args)))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sin(2*x*y)<br>
+&nbsp;<br>
+2.1.&nbsp;pattern&nbsp;-&gt;&nbsp;expr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;obj.<a href="#Relation-replace">replace</a>(pattern(wild),&nbsp;expr(wild))<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Replace&nbsp;subexpressions&nbsp;matching&nbsp;``pattern``&nbsp;with&nbsp;the&nbsp;expression<br>
+&nbsp;&nbsp;&nbsp;&nbsp;written&nbsp;in&nbsp;terms&nbsp;of&nbsp;the&nbsp;Wild&nbsp;symbols&nbsp;in&nbsp;``pattern``.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;a,&nbsp;b&nbsp;=&nbsp;map(Wild,&nbsp;'ab')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin(a),&nbsp;tan(a))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(tan(x))&nbsp;+&nbsp;tan(tan(x**2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin(a),&nbsp;tan(a/2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(tan(x/2))&nbsp;+&nbsp;tan(tan(x**2/2))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin(a),&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(x)&nbsp;+&nbsp;tan(x**2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(x*y).<a href="#Relation-replace">replace</a>(a*x,&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Matching&nbsp;is&nbsp;exact&nbsp;by&nbsp;default&nbsp;when&nbsp;more&nbsp;than&nbsp;one&nbsp;Wild&nbsp;symbol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;used:&nbsp;matching&nbsp;fails&nbsp;unless&nbsp;the&nbsp;match&nbsp;gives&nbsp;non-zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;values&nbsp;for&nbsp;all&nbsp;Wild&nbsp;symbols:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(2*x&nbsp;+&nbsp;y).<a href="#Relation-replace">replace</a>(a*x&nbsp;+&nbsp;b,&nbsp;b&nbsp;-&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;-&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(2*x).<a href="#Relation-replace">replace</a>(a*x&nbsp;+&nbsp;b,&nbsp;b&nbsp;-&nbsp;a)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2*x<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;set&nbsp;to&nbsp;False,&nbsp;the&nbsp;results&nbsp;may&nbsp;be&nbsp;non-intuitive:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;(2*x).<a href="#Relation-replace">replace</a>(a*x&nbsp;+&nbsp;b,&nbsp;b&nbsp;-&nbsp;a,&nbsp;exact=False)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2/x<br>
+&nbsp;<br>
+2.2.&nbsp;pattern&nbsp;-&gt;&nbsp;func<br>
+&nbsp;&nbsp;&nbsp;&nbsp;obj.<a href="#Relation-replace">replace</a>(pattern(wild),&nbsp;lambda&nbsp;wild:&nbsp;expr(wild))<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;All&nbsp;behavior&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;in&nbsp;2.1&nbsp;but&nbsp;now&nbsp;a&nbsp;function&nbsp;in&nbsp;terms&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pattern&nbsp;variables&nbsp;is&nbsp;used&nbsp;rather&nbsp;than&nbsp;an&nbsp;expression:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;f.<a href="#Relation-replace">replace</a>(sin(a),&nbsp;lambda&nbsp;a:&nbsp;sin(2*a))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;log(sin(2*x))&nbsp;+&nbsp;tan(sin(2*x**2))<br>
+&nbsp;<br>
+3.1.&nbsp;func&nbsp;-&gt;&nbsp;func<br>
+&nbsp;&nbsp;&nbsp;&nbsp;obj.<a href="#Relation-replace">replace</a>(filter,&nbsp;func)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Replace&nbsp;subexpression&nbsp;``e``&nbsp;with&nbsp;``<a href="#Relation-func">func</a>(e)``&nbsp;if&nbsp;``filter(e)``<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is&nbsp;True.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;g&nbsp;=&nbsp;2*sin(x**3)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;g.<a href="#Relation-replace">replace</a>(lambda&nbsp;expr:&nbsp;expr.is_Number,&nbsp;lambda&nbsp;expr:&nbsp;expr**2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4*sin(x**9)<br>
+&nbsp;<br>
+The&nbsp;expression&nbsp;itself&nbsp;is&nbsp;also&nbsp;targeted&nbsp;by&nbsp;the&nbsp;query&nbsp;but&nbsp;is&nbsp;done&nbsp;in<br>
+such&nbsp;a&nbsp;fashion&nbsp;that&nbsp;changes&nbsp;are&nbsp;not&nbsp;made&nbsp;twice.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;x*(x*y&nbsp;+&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;e.<a href="#Relation-replace">replace</a>(lambda&nbsp;x:&nbsp;x.is_Mul,&nbsp;lambda&nbsp;x:&nbsp;2*x)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2*x*(2*x*y&nbsp;+&nbsp;1)<br>
+&nbsp;<br>
+When&nbsp;matching&nbsp;a&nbsp;single&nbsp;symbol,&nbsp;`exact`&nbsp;will&nbsp;default&nbsp;to&nbsp;True,&nbsp;but<br>
+this&nbsp;may&nbsp;or&nbsp;may&nbsp;not&nbsp;be&nbsp;the&nbsp;behavior&nbsp;that&nbsp;is&nbsp;desired:<br>
+&nbsp;<br>
+Here,&nbsp;we&nbsp;want&nbsp;`exact=False`:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Function<br>
+&gt;&gt;&gt;&nbsp;f&nbsp;=&nbsp;Function('f')<br>
+&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;f(1)&nbsp;+&nbsp;f(0)<br>
+&gt;&gt;&gt;&nbsp;q&nbsp;=&nbsp;f(a),&nbsp;lambda&nbsp;a:&nbsp;f(a&nbsp;+&nbsp;1)<br>
+&gt;&gt;&gt;&nbsp;e.<a href="#Relation-replace">replace</a>(*q,&nbsp;exact=False)<br>
+f(1)&nbsp;+&nbsp;f(2)<br>
+&gt;&gt;&gt;&nbsp;e.<a href="#Relation-replace">replace</a>(*q,&nbsp;exact=True)<br>
+f(0)&nbsp;+&nbsp;f(2)<br>
+&nbsp;<br>
+But&nbsp;here,&nbsp;the&nbsp;nature&nbsp;of&nbsp;matching&nbsp;makes&nbsp;selecting<br>
+the&nbsp;right&nbsp;setting&nbsp;tricky:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;x**(1&nbsp;+&nbsp;y)<br>
+&gt;&gt;&gt;&nbsp;(x**(1&nbsp;+&nbsp;y)).<a href="#Relation-replace">replace</a>(x**(1&nbsp;+&nbsp;a),&nbsp;lambda&nbsp;a:&nbsp;x**-a,&nbsp;exact=False)<br>
+x<br>
+&gt;&gt;&gt;&nbsp;(x**(1&nbsp;+&nbsp;y)).<a href="#Relation-replace">replace</a>(x**(1&nbsp;+&nbsp;a),&nbsp;lambda&nbsp;a:&nbsp;x**-a,&nbsp;exact=True)<br>
+x**(-x&nbsp;-&nbsp;y&nbsp;+&nbsp;1)<br>
+&gt;&gt;&gt;&nbsp;(x**y).<a href="#Relation-replace">replace</a>(x**(1&nbsp;+&nbsp;a),&nbsp;lambda&nbsp;a:&nbsp;x**-a,&nbsp;exact=False)<br>
+x<br>
+&gt;&gt;&gt;&nbsp;(x**y).<a href="#Relation-replace">replace</a>(x**(1&nbsp;+&nbsp;a),&nbsp;lambda&nbsp;a:&nbsp;x**-a,&nbsp;exact=True)<br>
+x**(1&nbsp;-&nbsp;y)<br>
+&nbsp;<br>
+It&nbsp;is&nbsp;probably&nbsp;better&nbsp;to&nbsp;use&nbsp;a&nbsp;different&nbsp;form&nbsp;of&nbsp;the&nbsp;query<br>
+that&nbsp;describes&nbsp;the&nbsp;target&nbsp;expression&nbsp;more&nbsp;precisely:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x**(1&nbsp;+&nbsp;y)).<a href="#Relation-replace">replace</a>(<br>
+...&nbsp;lambda&nbsp;x:&nbsp;x.is_Pow&nbsp;and&nbsp;x.exp.is_Add&nbsp;and&nbsp;x.exp.args[0]&nbsp;==&nbsp;1,<br>
+...&nbsp;lambda&nbsp;x:&nbsp;x.base**(1&nbsp;-&nbsp;(x.exp&nbsp;-&nbsp;1)))<br>
+...<br>
+x**(1&nbsp;-&nbsp;y)&nbsp;+&nbsp;1<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+========<br>
+&nbsp;<br>
+subs:&nbsp;substitution&nbsp;of&nbsp;subexpressions&nbsp;as&nbsp;defined&nbsp;by&nbsp;the&nbsp;objects<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;themselves.<br>
+xreplace:&nbsp;exact&nbsp;node&nbsp;replacement&nbsp;in&nbsp;expr&nbsp;tree;&nbsp;also&nbsp;capable&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;matching&nbsp;rules</tt></dd></dl>
+
+<dl><dt><a name="Relation-rewrite"><strong>rewrite</strong></a>(self, *args, **hints)</dt><dd><tt>Rewrite&nbsp;functions&nbsp;in&nbsp;terms&nbsp;of&nbsp;other&nbsp;functions.<br>
+&nbsp;<br>
+Rewrites&nbsp;expression&nbsp;containing&nbsp;applications&nbsp;of&nbsp;functions<br>
+of&nbsp;one&nbsp;kind&nbsp;in&nbsp;terms&nbsp;of&nbsp;functions&nbsp;of&nbsp;different&nbsp;kind.&nbsp;For<br>
+example&nbsp;you&nbsp;can&nbsp;rewrite&nbsp;trigonometric&nbsp;functions&nbsp;as&nbsp;complex<br>
+exponentials&nbsp;or&nbsp;combinatorial&nbsp;functions&nbsp;as&nbsp;gamma&nbsp;function.<br>
+&nbsp;<br>
+As&nbsp;a&nbsp;pattern&nbsp;this&nbsp;function&nbsp;accepts&nbsp;a&nbsp;list&nbsp;of&nbsp;functions&nbsp;to<br>
+to&nbsp;rewrite&nbsp;(instances&nbsp;of&nbsp;DefinedFunction&nbsp;class).&nbsp;As&nbsp;rule<br>
+you&nbsp;can&nbsp;use&nbsp;string&nbsp;or&nbsp;a&nbsp;destination&nbsp;function&nbsp;instance&nbsp;(in<br>
+this&nbsp;case&nbsp;<a href="#Relation-rewrite">rewrite</a>()&nbsp;will&nbsp;use&nbsp;the&nbsp;str()&nbsp;function).<br>
+&nbsp;<br>
+There&nbsp;is&nbsp;also&nbsp;the&nbsp;possibility&nbsp;to&nbsp;pass&nbsp;hints&nbsp;on&nbsp;how&nbsp;to&nbsp;rewrite<br>
+the&nbsp;given&nbsp;expressions.&nbsp;For&nbsp;now&nbsp;there&nbsp;is&nbsp;only&nbsp;one&nbsp;such&nbsp;hint<br>
+defined&nbsp;called&nbsp;'deep'.&nbsp;When&nbsp;'deep'&nbsp;is&nbsp;set&nbsp;to&nbsp;False&nbsp;it&nbsp;will<br>
+forbid&nbsp;functions&nbsp;to&nbsp;rewrite&nbsp;their&nbsp;contents.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;sin,&nbsp;exp<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&nbsp;<br>
+Unspecified&nbsp;pattern:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;sin(x).<a href="#Relation-rewrite">rewrite</a>(exp)<br>
+-I*(exp(I*x)&nbsp;-&nbsp;exp(-I*x))/2<br>
+&nbsp;<br>
+Pattern&nbsp;as&nbsp;a&nbsp;single&nbsp;function:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;sin(x).<a href="#Relation-rewrite">rewrite</a>(sin,&nbsp;exp)<br>
+-I*(exp(I*x)&nbsp;-&nbsp;exp(-I*x))/2<br>
+&nbsp;<br>
+Pattern&nbsp;as&nbsp;a&nbsp;list&nbsp;of&nbsp;functions:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;sin(x).<a href="#Relation-rewrite">rewrite</a>([sin,&nbsp;],&nbsp;exp)<br>
+-I*(exp(I*x)&nbsp;-&nbsp;exp(-I*x))/2</tt></dd></dl>
+
+<dl><dt><a name="Relation-simplify"><strong>simplify</strong></a>(self, **kwargs)</dt><dd><tt>See&nbsp;the&nbsp;simplify&nbsp;function&nbsp;in&nbsp;sympy.simplify</tt></dd></dl>
+
+<dl><dt><a name="Relation-sort_key"><strong>sort_key</strong></a>(self, order=None)</dt><dd><tt>Return&nbsp;a&nbsp;sort&nbsp;key.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.core&nbsp;import&nbsp;S,&nbsp;I<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;sorted([S(1)/2,&nbsp;I,&nbsp;-I],&nbsp;key=lambda&nbsp;x:&nbsp;x.<a href="#Relation-sort_key">sort_key</a>())<br>
+[1/2,&nbsp;-I,&nbsp;I]<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;S("[x,&nbsp;1/x,&nbsp;1/x**2,&nbsp;x**2,&nbsp;x**(1/2),&nbsp;x**(1/4),&nbsp;x**(3/2)]")<br>
+[x,&nbsp;1/x,&nbsp;x**(-2),&nbsp;x**2,&nbsp;sqrt(x),&nbsp;x**(1/4),&nbsp;x**(3/2)]<br>
+&gt;&gt;&gt;&nbsp;sorted(_,&nbsp;key=lambda&nbsp;x:&nbsp;x.<a href="#Relation-sort_key">sort_key</a>())<br>
+[x**(-2),&nbsp;1/x,&nbsp;x**(1/4),&nbsp;sqrt(x),&nbsp;x,&nbsp;x**(3/2),&nbsp;x**2]</tt></dd></dl>
+
+<dl><dt><a name="Relation-subs"><strong>subs</strong></a>(self, *args, **kwargs)</dt><dd><tt>Substitutes&nbsp;old&nbsp;for&nbsp;new&nbsp;in&nbsp;an&nbsp;expression&nbsp;after&nbsp;sympifying&nbsp;args.<br>
+&nbsp;<br>
+`args`&nbsp;is&nbsp;either:<br>
+&nbsp;&nbsp;-&nbsp;two&nbsp;arguments,&nbsp;e.g.&nbsp;foo.<a href="#Relation-subs">subs</a>(old,&nbsp;new)<br>
+&nbsp;&nbsp;-&nbsp;one&nbsp;iterable&nbsp;argument,&nbsp;e.g.&nbsp;foo.<a href="#Relation-subs">subs</a>(iterable).&nbsp;The&nbsp;iterable&nbsp;may&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;an&nbsp;iterable&nbsp;container&nbsp;with&nbsp;(old,&nbsp;new)&nbsp;pairs.&nbsp;In&nbsp;this&nbsp;case&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;replacements&nbsp;are&nbsp;processed&nbsp;in&nbsp;the&nbsp;order&nbsp;given&nbsp;with&nbsp;successive<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;patterns&nbsp;possibly&nbsp;affecting&nbsp;replacements&nbsp;already&nbsp;made.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o&nbsp;a&nbsp;dict&nbsp;or&nbsp;set&nbsp;whose&nbsp;key/value&nbsp;items&nbsp;correspond&nbsp;to&nbsp;old/new&nbsp;pairs.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In&nbsp;this&nbsp;case&nbsp;the&nbsp;old/new&nbsp;pairs&nbsp;will&nbsp;be&nbsp;sorted&nbsp;by&nbsp;op&nbsp;count&nbsp;and&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case&nbsp;of&nbsp;a&nbsp;tie,&nbsp;by&nbsp;number&nbsp;of&nbsp;args&nbsp;and&nbsp;the&nbsp;default_sort_key.&nbsp;The<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resulting&nbsp;sorted&nbsp;list&nbsp;is&nbsp;then&nbsp;processed&nbsp;as&nbsp;an&nbsp;iterable&nbsp;container<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(see&nbsp;previous).<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;keyword&nbsp;``simultaneous``&nbsp;is&nbsp;True,&nbsp;the&nbsp;subexpressions&nbsp;will&nbsp;not&nbsp;be<br>
+evaluated&nbsp;until&nbsp;all&nbsp;the&nbsp;substitutions&nbsp;have&nbsp;been&nbsp;made.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;pi,&nbsp;exp,&nbsp;limit,&nbsp;oo<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x*y).<a href="#Relation-subs">subs</a>(x,&nbsp;pi)<br>
+pi*y&nbsp;+&nbsp;1<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x*y).<a href="#Relation-subs">subs</a>({x:pi,&nbsp;y:2})<br>
+1&nbsp;+&nbsp;2*pi<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x*y).<a href="#Relation-subs">subs</a>([(x,&nbsp;pi),&nbsp;(y,&nbsp;2)])<br>
+1&nbsp;+&nbsp;2*pi<br>
+&gt;&gt;&gt;&nbsp;reps&nbsp;=&nbsp;[(y,&nbsp;x**2),&nbsp;(x,&nbsp;2)]<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;y).<a href="#Relation-subs">subs</a>(reps)<br>
+6<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;y).<a href="#Relation-subs">subs</a>(reversed(reps))<br>
+x**2&nbsp;+&nbsp;2<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x**2&nbsp;+&nbsp;x**4).<a href="#Relation-subs">subs</a>(x**2,&nbsp;y)<br>
+y**2&nbsp;+&nbsp;y<br>
+&nbsp;<br>
+To&nbsp;replace&nbsp;only&nbsp;the&nbsp;x**2&nbsp;but&nbsp;not&nbsp;the&nbsp;x**4,&nbsp;use&nbsp;xreplace:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x**2&nbsp;+&nbsp;x**4).<a href="#Relation-xreplace">xreplace</a>({x**2:&nbsp;y})<br>
+x**4&nbsp;+&nbsp;y<br>
+&nbsp;<br>
+To&nbsp;delay&nbsp;evaluation&nbsp;until&nbsp;all&nbsp;substitutions&nbsp;have&nbsp;been&nbsp;made,<br>
+set&nbsp;the&nbsp;keyword&nbsp;``simultaneous``&nbsp;to&nbsp;True:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x/y).<a href="#Relation-subs">subs</a>([(x,&nbsp;0),&nbsp;(y,&nbsp;0)])<br>
+0<br>
+&gt;&gt;&gt;&nbsp;(x/y).<a href="#Relation-subs">subs</a>([(x,&nbsp;0),&nbsp;(y,&nbsp;0)],&nbsp;simultaneous=True)<br>
+nan<br>
+&nbsp;<br>
+This&nbsp;has&nbsp;the&nbsp;added&nbsp;feature&nbsp;of&nbsp;not&nbsp;allowing&nbsp;subsequent&nbsp;substitutions<br>
+to&nbsp;affect&nbsp;those&nbsp;already&nbsp;made:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;((x&nbsp;+&nbsp;y)/y).<a href="#Relation-subs">subs</a>({x&nbsp;+&nbsp;y:&nbsp;y,&nbsp;y:&nbsp;x&nbsp;+&nbsp;y})<br>
+1<br>
+&gt;&gt;&gt;&nbsp;((x&nbsp;+&nbsp;y)/y).<a href="#Relation-subs">subs</a>({x&nbsp;+&nbsp;y:&nbsp;y,&nbsp;y:&nbsp;x&nbsp;+&nbsp;y},&nbsp;simultaneous=True)<br>
+y/(x&nbsp;+&nbsp;y)<br>
+&nbsp;<br>
+In&nbsp;order&nbsp;to&nbsp;obtain&nbsp;a&nbsp;canonical&nbsp;result,&nbsp;unordered&nbsp;iterables&nbsp;are<br>
+sorted&nbsp;by&nbsp;count_op&nbsp;length,&nbsp;number&nbsp;of&nbsp;arguments&nbsp;and&nbsp;by&nbsp;the<br>
+default_sort_key&nbsp;to&nbsp;break&nbsp;any&nbsp;ties.&nbsp;All&nbsp;other&nbsp;iterables&nbsp;are&nbsp;left<br>
+unsorted.<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;sqrt,&nbsp;sin,&nbsp;cos<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;a,&nbsp;b,&nbsp;c,&nbsp;d,&nbsp;e<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;A&nbsp;=&nbsp;(sqrt(sin(2*x)),&nbsp;a)<br>
+&gt;&gt;&gt;&nbsp;B&nbsp;=&nbsp;(sin(2*x),&nbsp;b)<br>
+&gt;&gt;&gt;&nbsp;C&nbsp;=&nbsp;(cos(2*x),&nbsp;c)<br>
+&gt;&gt;&gt;&nbsp;D&nbsp;=&nbsp;(x,&nbsp;d)<br>
+&gt;&gt;&gt;&nbsp;E&nbsp;=&nbsp;(exp(x),&nbsp;e)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;expr&nbsp;=&nbsp;sqrt(sin(2*x))*sin(exp(x)*x)*cos(2*x)&nbsp;+&nbsp;sin(2*x)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;expr.<a href="#Relation-subs">subs</a>(dict([A,&nbsp;B,&nbsp;C,&nbsp;D,&nbsp;E]))<br>
+a*c*sin(d*e)&nbsp;+&nbsp;b<br>
+&nbsp;<br>
+The&nbsp;resulting&nbsp;expression&nbsp;represents&nbsp;a&nbsp;literal&nbsp;replacement&nbsp;of&nbsp;the<br>
+old&nbsp;arguments&nbsp;with&nbsp;the&nbsp;new&nbsp;arguments.&nbsp;This&nbsp;may&nbsp;not&nbsp;reflect&nbsp;the<br>
+limiting&nbsp;behavior&nbsp;of&nbsp;the&nbsp;expression:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x**3&nbsp;-&nbsp;3*x).<a href="#Relation-subs">subs</a>({x:&nbsp;oo})<br>
+nan<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;limit(x**3&nbsp;-&nbsp;3*x,&nbsp;x,&nbsp;oo)<br>
+oo<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;substitution&nbsp;will&nbsp;be&nbsp;followed&nbsp;by&nbsp;numerical<br>
+evaluation,&nbsp;it&nbsp;is&nbsp;better&nbsp;to&nbsp;pass&nbsp;the&nbsp;substitution&nbsp;to<br>
+evalf&nbsp;as<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1/x).<a href="#Relation-evalf">evalf</a>(subs={x:&nbsp;3.0},&nbsp;n=21)<br>
+0.333333333333333333333<br>
+&nbsp;<br>
+rather&nbsp;than<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(1/x).<a href="#Relation-subs">subs</a>({x:&nbsp;3.0}).<a href="#Relation-evalf">evalf</a>(21)<br>
+0.333333333333333314830<br>
+&nbsp;<br>
+as&nbsp;the&nbsp;former&nbsp;will&nbsp;ensure&nbsp;that&nbsp;the&nbsp;desired&nbsp;level&nbsp;of&nbsp;precision&nbsp;is<br>
+obtained.<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+========<br>
+replace:&nbsp;replacement&nbsp;capable&nbsp;of&nbsp;doing&nbsp;wildcard-like&nbsp;matching,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parsing&nbsp;of&nbsp;match,&nbsp;and&nbsp;conditional&nbsp;replacements<br>
+xreplace:&nbsp;exact&nbsp;node&nbsp;replacement&nbsp;in&nbsp;expr&nbsp;tree;&nbsp;also&nbsp;capable&nbsp;of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;using&nbsp;matching&nbsp;rules<br>
+sympy.core.evalf.EvalfMixin.evalf:&nbsp;calculates&nbsp;the&nbsp;given&nbsp;formula&nbsp;to&nbsp;a&nbsp;desired&nbsp;level&nbsp;of&nbsp;precision</tt></dd></dl>
+
+<dl><dt><a name="Relation-xreplace"><strong>xreplace</strong></a>(self, rule)</dt><dd><tt>Replace&nbsp;occurrences&nbsp;of&nbsp;objects&nbsp;within&nbsp;the&nbsp;expression.<br>
+&nbsp;<br>
+Parameters<br>
+==========<br>
+&nbsp;<br>
+rule&nbsp;:&nbsp;dict-like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Expresses&nbsp;a&nbsp;replacement&nbsp;rule<br>
+&nbsp;<br>
+Returns<br>
+=======<br>
+&nbsp;<br>
+xreplace&nbsp;:&nbsp;the&nbsp;result&nbsp;of&nbsp;the&nbsp;replacement<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;symbols,&nbsp;pi,&nbsp;exp<br>
+&gt;&gt;&gt;&nbsp;x,&nbsp;y,&nbsp;z&nbsp;=&nbsp;symbols('x&nbsp;y&nbsp;z')<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x*y).<a href="#Relation-xreplace">xreplace</a>({x:&nbsp;pi})<br>
+pi*y&nbsp;+&nbsp;1<br>
+&gt;&gt;&gt;&nbsp;(1&nbsp;+&nbsp;x*y).<a href="#Relation-xreplace">xreplace</a>({x:&nbsp;pi,&nbsp;y:&nbsp;2})<br>
+1&nbsp;+&nbsp;2*pi<br>
+&nbsp;<br>
+Replacements&nbsp;occur&nbsp;only&nbsp;if&nbsp;an&nbsp;entire&nbsp;node&nbsp;in&nbsp;the&nbsp;expression&nbsp;tree&nbsp;is<br>
+matched:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x*y&nbsp;+&nbsp;z).<a href="#Relation-xreplace">xreplace</a>({x*y:&nbsp;pi})<br>
+z&nbsp;+&nbsp;pi<br>
+&gt;&gt;&gt;&nbsp;(x*y*z).<a href="#Relation-xreplace">xreplace</a>({x*y:&nbsp;pi})<br>
+x*y*z<br>
+&gt;&gt;&gt;&nbsp;(2*x).<a href="#Relation-xreplace">xreplace</a>({2*x:&nbsp;y,&nbsp;x:&nbsp;z})<br>
+y<br>
+&gt;&gt;&gt;&nbsp;(2*2*x).<a href="#Relation-xreplace">xreplace</a>({2*x:&nbsp;y,&nbsp;x:&nbsp;z})<br>
+4*z<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;y&nbsp;+&nbsp;2).<a href="#Relation-xreplace">xreplace</a>({x&nbsp;+&nbsp;y:&nbsp;2})<br>
+x&nbsp;+&nbsp;y&nbsp;+&nbsp;2<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;2&nbsp;+&nbsp;exp(x&nbsp;+&nbsp;2)).<a href="#Relation-xreplace">xreplace</a>({x&nbsp;+&nbsp;2:&nbsp;y})<br>
+x&nbsp;+&nbsp;exp(y)&nbsp;+&nbsp;2<br>
+&nbsp;<br>
+xreplace&nbsp;doesn't&nbsp;differentiate&nbsp;between&nbsp;free&nbsp;and&nbsp;bound&nbsp;symbols.&nbsp;In&nbsp;the<br>
+following,&nbsp;<a href="#Relation-subs">subs</a>(x,&nbsp;y)&nbsp;would&nbsp;not&nbsp;change&nbsp;x&nbsp;since&nbsp;it&nbsp;is&nbsp;a&nbsp;bound&nbsp;symbol,<br>
+but&nbsp;xreplace&nbsp;does:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Integral<br>
+&gt;&gt;&gt;&nbsp;Integral(x,&nbsp;(x,&nbsp;1,&nbsp;2*x)).<a href="#Relation-xreplace">xreplace</a>({x:&nbsp;y})<br>
+Integral(y,&nbsp;(y,&nbsp;1,&nbsp;2*y))<br>
+&nbsp;<br>
+Trying&nbsp;to&nbsp;replace&nbsp;x&nbsp;with&nbsp;an&nbsp;expression&nbsp;raises&nbsp;an&nbsp;error:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;Integral(x,&nbsp;(x,&nbsp;1,&nbsp;2*x)).<a href="#Relation-xreplace">xreplace</a>({x:&nbsp;2*y})&nbsp;#&nbsp;doctest:&nbsp;+SKIP<br>
+ValueError:&nbsp;Invalid&nbsp;limits&nbsp;given:&nbsp;((2*y,&nbsp;1,&nbsp;4*y),)<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+========<br>
+replace:&nbsp;replacement&nbsp;capable&nbsp;of&nbsp;doing&nbsp;wildcard-like&nbsp;matching,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parsing&nbsp;of&nbsp;match,&nbsp;and&nbsp;conditional&nbsp;replacements<br>
+subs:&nbsp;substitution&nbsp;of&nbsp;subexpressions&nbsp;as&nbsp;defined&nbsp;by&nbsp;the&nbsp;objects<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;themselves.</tt></dd></dl>
+
+<hr>
+Class methods inherited from <a href="sympy.core.basic.html#Basic">sympy.core.basic.Basic</a>:<br>
+<dl><dt><a name="Relation-class_key"><strong>class_key</strong></a>()<font color="#909090"><font face="helvetica, arial"> from <a href="sympy.core.assumptions.html#ManagedProperties">sympy.core.assumptions.ManagedProperties</a></font></font></dt><dd><tt>Nice&nbsp;order&nbsp;of&nbsp;classes.</tt></dd></dl>
+
+<dl><dt><a name="Relation-fromiter"><strong>fromiter</strong></a>(args, **assumptions)<font color="#909090"><font face="helvetica, arial"> from <a href="sympy.core.assumptions.html#ManagedProperties">sympy.core.assumptions.ManagedProperties</a></font></font></dt><dd><tt>Create&nbsp;a&nbsp;new&nbsp;object&nbsp;from&nbsp;an&nbsp;iterable.<br>
+&nbsp;<br>
+This&nbsp;is&nbsp;a&nbsp;convenience&nbsp;function&nbsp;that&nbsp;allows&nbsp;one&nbsp;to&nbsp;create&nbsp;objects&nbsp;from<br>
+any&nbsp;iterable,&nbsp;without&nbsp;having&nbsp;to&nbsp;convert&nbsp;to&nbsp;a&nbsp;list&nbsp;or&nbsp;tuple&nbsp;first.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Tuple<br>
+&gt;&gt;&gt;&nbsp;Tuple.<a href="#Relation-fromiter">fromiter</a>(i&nbsp;for&nbsp;i&nbsp;in&nbsp;range(5))<br>
+(0,&nbsp;1,&nbsp;2,&nbsp;3,&nbsp;4)</tt></dd></dl>
+
+<hr>
+Readonly properties inherited from <a href="sympy.core.basic.html#Basic">sympy.core.basic.Basic</a>:<br>
+<dl><dt><strong>args</strong></dt>
+<dd><tt>Returns&nbsp;a&nbsp;tuple&nbsp;of&nbsp;arguments&nbsp;of&nbsp;'self'.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;cot<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;cot(x).args<br>
+(x,)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;cot(x).args[0]<br>
+x<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x*y).args<br>
+(x,&nbsp;y)<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x*y).args[1]<br>
+y<br>
+&nbsp;<br>
+Notes<br>
+=====<br>
+&nbsp;<br>
+Never&nbsp;use&nbsp;self.<strong>_args</strong>,&nbsp;always&nbsp;use&nbsp;self.<strong>args</strong>.<br>
+Only&nbsp;use&nbsp;_args&nbsp;in&nbsp;__new__&nbsp;when&nbsp;creating&nbsp;a&nbsp;new&nbsp;function.<br>
+Don't&nbsp;override&nbsp;.args()&nbsp;from&nbsp;Basic&nbsp;(so&nbsp;that&nbsp;it's&nbsp;easy&nbsp;to<br>
+change&nbsp;the&nbsp;interface&nbsp;in&nbsp;the&nbsp;future&nbsp;if&nbsp;needed).</tt></dd>
+</dl>
+<dl><dt><strong>assumptions0</strong></dt>
+<dd><tt>Return&nbsp;object&nbsp;`type`&nbsp;assumptions.<br>
+&nbsp;<br>
+For&nbsp;example:<br>
+&nbsp;<br>
+&nbsp;&nbsp;Symbol('x',&nbsp;real=True)<br>
+&nbsp;&nbsp;Symbol('x',&nbsp;integer=True)<br>
+&nbsp;<br>
+are&nbsp;different&nbsp;objects.&nbsp;In&nbsp;other&nbsp;words,&nbsp;besides&nbsp;Python&nbsp;type&nbsp;(Symbol&nbsp;in<br>
+this&nbsp;case),&nbsp;the&nbsp;initial&nbsp;assumptions&nbsp;are&nbsp;also&nbsp;forming&nbsp;their&nbsp;typeinfo.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Symbol<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&gt;&gt;&gt;&nbsp;x.assumptions0<br>
+{'commutative':&nbsp;True}<br>
+&gt;&gt;&gt;&nbsp;x&nbsp;=&nbsp;Symbol("x",&nbsp;positive=True)<br>
+&gt;&gt;&gt;&nbsp;x.assumptions0<br>
+{'commutative':&nbsp;True,&nbsp;'complex':&nbsp;True,&nbsp;'extended_negative':&nbsp;False,<br>
+&nbsp;'extended_nonnegative':&nbsp;True,&nbsp;'extended_nonpositive':&nbsp;False,<br>
+&nbsp;'extended_nonzero':&nbsp;True,&nbsp;'extended_positive':&nbsp;True,&nbsp;'extended_real':<br>
+&nbsp;True,&nbsp;'finite':&nbsp;True,&nbsp;'hermitian':&nbsp;True,&nbsp;'imaginary':&nbsp;False,<br>
+&nbsp;'infinite':&nbsp;False,&nbsp;'negative':&nbsp;False,&nbsp;'nonnegative':&nbsp;True,<br>
+&nbsp;'nonpositive':&nbsp;False,&nbsp;'nonzero':&nbsp;True,&nbsp;'positive':&nbsp;True,&nbsp;'real':<br>
+&nbsp;True,&nbsp;'zero':&nbsp;False}</tt></dd>
+</dl>
+<dl><dt><strong>canonical_variables</strong></dt>
+<dd><tt>Return&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;any&nbsp;variable&nbsp;defined&nbsp;in<br>
+``self.<strong>bound_symbols</strong>``&nbsp;to&nbsp;Symbols&nbsp;that&nbsp;do&nbsp;not&nbsp;clash<br>
+with&nbsp;any&nbsp;free&nbsp;symbols&nbsp;in&nbsp;the&nbsp;expression.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;Lambda<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&gt;&gt;&gt;&nbsp;Lambda(x,&nbsp;2*x).canonical_variables<br>
+{x:&nbsp;_0}</tt></dd>
+</dl>
+<dl><dt><strong>expr_free_symbols</strong></dt>
+</dl>
+<dl><dt><strong>free_symbols</strong></dt>
+<dd><tt>Return&nbsp;from&nbsp;the&nbsp;atoms&nbsp;of&nbsp;self&nbsp;those&nbsp;which&nbsp;are&nbsp;free&nbsp;symbols.<br>
+&nbsp;<br>
+For&nbsp;most&nbsp;expressions,&nbsp;all&nbsp;symbols&nbsp;are&nbsp;free&nbsp;symbols.&nbsp;For&nbsp;some&nbsp;classes<br>
+this&nbsp;is&nbsp;not&nbsp;true.&nbsp;e.g.&nbsp;Integrals&nbsp;use&nbsp;Symbols&nbsp;for&nbsp;the&nbsp;dummy&nbsp;variables<br>
+which&nbsp;are&nbsp;bound&nbsp;variables,&nbsp;so&nbsp;Integral&nbsp;has&nbsp;a&nbsp;method&nbsp;to&nbsp;return&nbsp;all<br>
+symbols&nbsp;except&nbsp;those.&nbsp;Derivative&nbsp;keeps&nbsp;track&nbsp;of&nbsp;symbols&nbsp;with&nbsp;respect<br>
+to&nbsp;which&nbsp;it&nbsp;will&nbsp;perform&nbsp;a&nbsp;derivative;&nbsp;those&nbsp;are<br>
+bound&nbsp;variables,&nbsp;too,&nbsp;so&nbsp;it&nbsp;has&nbsp;its&nbsp;own&nbsp;free_symbols&nbsp;method.<br>
+&nbsp;<br>
+Any&nbsp;other&nbsp;method&nbsp;that&nbsp;uses&nbsp;bound&nbsp;variables&nbsp;should&nbsp;implement&nbsp;a<br>
+free_symbols&nbsp;method.</tt></dd>
+</dl>
+<dl><dt><strong>func</strong></dt>
+<dd><tt>The&nbsp;top-level&nbsp;function&nbsp;in&nbsp;an&nbsp;expression.<br>
+&nbsp;<br>
+The&nbsp;following&nbsp;should&nbsp;hold&nbsp;for&nbsp;all&nbsp;objects::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&nbsp;x&nbsp;==&nbsp;x.func(*x.args)<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x<br>
+&gt;&gt;&gt;&nbsp;a&nbsp;=&nbsp;2*x<br>
+&gt;&gt;&gt;&nbsp;a.func<br>
+&lt;class&nbsp;'sympy.core.mul.Mul'&gt;<br>
+&gt;&gt;&gt;&nbsp;a.args<br>
+(2,&nbsp;x)<br>
+&gt;&gt;&gt;&nbsp;a.func(*a.args)<br>
+2*x<br>
+&gt;&gt;&gt;&nbsp;a&nbsp;==&nbsp;a.func(*a.args)<br>
+True</tt></dd>
+</dl>
+<dl><dt><strong>is_algebraic</strong></dt>
+</dl>
+<dl><dt><strong>is_antihermitian</strong></dt>
+</dl>
+<dl><dt><strong>is_commutative</strong></dt>
+</dl>
+<dl><dt><strong>is_comparable</strong></dt>
+<dd><tt>Return&nbsp;True&nbsp;if&nbsp;self&nbsp;can&nbsp;be&nbsp;computed&nbsp;to&nbsp;a&nbsp;real&nbsp;number<br>
+(or&nbsp;already&nbsp;is&nbsp;a&nbsp;real&nbsp;number)&nbsp;with&nbsp;precision,&nbsp;else&nbsp;False.<br>
+&nbsp;<br>
+Examples<br>
+========<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;exp_polar,&nbsp;pi,&nbsp;I<br>
+&gt;&gt;&gt;&nbsp;(I*exp_polar(I*pi/2)).is_comparable<br>
+True<br>
+&gt;&gt;&gt;&nbsp;(I*exp_polar(I*pi*2)).is_comparable<br>
+False<br>
+&nbsp;<br>
+A&nbsp;False&nbsp;result&nbsp;does&nbsp;not&nbsp;mean&nbsp;that&nbsp;`self`&nbsp;cannot&nbsp;be&nbsp;rewritten<br>
+into&nbsp;a&nbsp;form&nbsp;that&nbsp;would&nbsp;be&nbsp;comparable.&nbsp;For&nbsp;example,&nbsp;the<br>
+difference&nbsp;computed&nbsp;below&nbsp;is&nbsp;zero&nbsp;but&nbsp;without&nbsp;simplification<br>
+it&nbsp;does&nbsp;not&nbsp;evaluate&nbsp;to&nbsp;a&nbsp;zero&nbsp;with&nbsp;precision:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;e&nbsp;=&nbsp;2**pi*(1&nbsp;+&nbsp;2**pi)<br>
+&gt;&gt;&gt;&nbsp;dif&nbsp;=&nbsp;e&nbsp;-&nbsp;e.expand()<br>
+&gt;&gt;&gt;&nbsp;dif.is_comparable<br>
+False<br>
+&gt;&gt;&gt;&nbsp;dif.n(2)._prec<br>
+1</tt></dd>
+</dl>
+<dl><dt><strong>is_complex</strong></dt>
+</dl>
+<dl><dt><strong>is_composite</strong></dt>
+</dl>
+<dl><dt><strong>is_even</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_negative</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_nonnegative</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_nonpositive</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_nonzero</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_positive</strong></dt>
+</dl>
+<dl><dt><strong>is_extended_real</strong></dt>
+</dl>
+<dl><dt><strong>is_finite</strong></dt>
+</dl>
+<dl><dt><strong>is_hermitian</strong></dt>
+</dl>
+<dl><dt><strong>is_imaginary</strong></dt>
+</dl>
+<dl><dt><strong>is_infinite</strong></dt>
+</dl>
+<dl><dt><strong>is_integer</strong></dt>
+</dl>
+<dl><dt><strong>is_irrational</strong></dt>
+</dl>
+<dl><dt><strong>is_negative</strong></dt>
+</dl>
+<dl><dt><strong>is_noninteger</strong></dt>
+</dl>
+<dl><dt><strong>is_nonnegative</strong></dt>
+</dl>
+<dl><dt><strong>is_nonpositive</strong></dt>
+</dl>
+<dl><dt><strong>is_nonzero</strong></dt>
+</dl>
+<dl><dt><strong>is_odd</strong></dt>
+</dl>
+<dl><dt><strong>is_polar</strong></dt>
+</dl>
+<dl><dt><strong>is_positive</strong></dt>
+</dl>
+<dl><dt><strong>is_prime</strong></dt>
+</dl>
+<dl><dt><strong>is_rational</strong></dt>
+</dl>
+<dl><dt><strong>is_real</strong></dt>
+</dl>
+<dl><dt><strong>is_transcendental</strong></dt>
+</dl>
+<dl><dt><strong>is_zero</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="sympy.core.basic.html#Basic">sympy.core.basic.Basic</a>:<br>
+<dl><dt><strong>is_Add</strong> = False</dl>
+
+<dl><dt><strong>is_AlgebraicNumber</strong> = False</dl>
+
+<dl><dt><strong>is_Atom</strong> = False</dl>
+
+<dl><dt><strong>is_Boolean</strong> = False</dl>
+
+<dl><dt><strong>is_Derivative</strong> = False</dl>
+
+<dl><dt><strong>is_Dummy</strong> = False</dl>
+
+<dl><dt><strong>is_Equality</strong> = False</dl>
+
+<dl><dt><strong>is_Float</strong> = False</dl>
+
+<dl><dt><strong>is_Function</strong> = False</dl>
+
+<dl><dt><strong>is_Indexed</strong> = False</dl>
+
+<dl><dt><strong>is_Integer</strong> = False</dl>
+
+<dl><dt><strong>is_MatAdd</strong> = False</dl>
+
+<dl><dt><strong>is_MatMul</strong> = False</dl>
+
+<dl><dt><strong>is_Matrix</strong> = False</dl>
+
+<dl><dt><strong>is_Mul</strong> = False</dl>
+
+<dl><dt><strong>is_Not</strong> = False</dl>
+
+<dl><dt><strong>is_Number</strong> = False</dl>
+
+<dl><dt><strong>is_NumberSymbol</strong> = False</dl>
+
+<dl><dt><strong>is_Order</strong> = False</dl>
+
+<dl><dt><strong>is_Piecewise</strong> = False</dl>
+
+<dl><dt><strong>is_Point</strong> = False</dl>
+
+<dl><dt><strong>is_Poly</strong> = False</dl>
+
+<dl><dt><strong>is_Pow</strong> = False</dl>
+
+<dl><dt><strong>is_Rational</strong> = False</dl>
+
+<dl><dt><strong>is_Relational</strong> = False</dl>
+
+<dl><dt><strong>is_Symbol</strong> = False</dl>
+
+<dl><dt><strong>is_Vector</strong> = False</dl>
+
+<dl><dt><strong>is_Wild</strong> = False</dl>
+
+<dl><dt><strong>is_symbol</strong> = False</dl>
+
+<hr>
+Methods inherited from <a href="sympy.printing.defaults.html#Printable">sympy.printing.defaults.Printable</a>:<br>
+<dl><dt><a name="Relation-__repr__"><strong>__repr__</strong></a> = <a href="#Relation-__str__">__str__</a>(self)</dt></dl>
+
+<dl><dt><a name="Relation-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="sympy.core.evalf.html#EvalfMixin">sympy.core.evalf.EvalfMixin</a>:<br>
+<dl><dt><a name="Relation-evalf"><strong>evalf</strong></a>(self, n=15, subs=None, maxn=100, chop=False, strict=False, quad=None, verbose=False)</dt><dd><tt>Evaluate&nbsp;the&nbsp;given&nbsp;formula&nbsp;to&nbsp;an&nbsp;accuracy&nbsp;of&nbsp;*n*&nbsp;digits.<br>
+&nbsp;<br>
+Parameters<br>
+==========<br>
+&nbsp;<br>
+subs&nbsp;:&nbsp;dict,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Substitute&nbsp;numerical&nbsp;values&nbsp;for&nbsp;symbols,&nbsp;e.g.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;``subs={x:3,&nbsp;y:1+pi}``.&nbsp;The&nbsp;substitutions&nbsp;must&nbsp;be&nbsp;given&nbsp;as&nbsp;a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dictionary.<br>
+&nbsp;<br>
+maxn&nbsp;:&nbsp;int,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Allow&nbsp;a&nbsp;maximum&nbsp;temporary&nbsp;working&nbsp;precision&nbsp;of&nbsp;maxn&nbsp;digits.<br>
+&nbsp;<br>
+chop&nbsp;:&nbsp;bool&nbsp;or&nbsp;number,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;how&nbsp;to&nbsp;replace&nbsp;tiny&nbsp;real&nbsp;or&nbsp;imaginary&nbsp;parts&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;subresults&nbsp;by&nbsp;exact&nbsp;zeros.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;When&nbsp;``True``&nbsp;the&nbsp;chop&nbsp;value&nbsp;defaults&nbsp;to&nbsp;standard&nbsp;precision.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Otherwise&nbsp;the&nbsp;chop&nbsp;value&nbsp;is&nbsp;used&nbsp;to&nbsp;determine&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;magnitude&nbsp;of&nbsp;"small"&nbsp;for&nbsp;purposes&nbsp;of&nbsp;chopping.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;from&nbsp;sympy&nbsp;import&nbsp;N<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;x&nbsp;=&nbsp;1e-4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;N(x,&nbsp;chop=True)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0.000100000000000000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;N(x,&nbsp;chop=1e-5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0.000100000000000000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt;&gt;&nbsp;N(x,&nbsp;chop=1e-4)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+&nbsp;<br>
+strict&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Raise&nbsp;``PrecisionExhausted``&nbsp;if&nbsp;any&nbsp;subresult&nbsp;fails&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evaluate&nbsp;to&nbsp;full&nbsp;accuracy,&nbsp;given&nbsp;the&nbsp;available&nbsp;maxprec.<br>
+&nbsp;<br>
+quad&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Choose&nbsp;algorithm&nbsp;for&nbsp;numerical&nbsp;quadrature.&nbsp;By&nbsp;default,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tanh-sinh&nbsp;quadrature&nbsp;is&nbsp;used.&nbsp;For&nbsp;oscillatory<br>
+&nbsp;&nbsp;&nbsp;&nbsp;integrals&nbsp;on&nbsp;an&nbsp;infinite&nbsp;interval,&nbsp;try&nbsp;``quad='osc'``.<br>
+&nbsp;<br>
+verbose&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Print&nbsp;debug&nbsp;information.<br>
+&nbsp;<br>
+Notes<br>
+=====<br>
+&nbsp;<br>
+When&nbsp;Floats&nbsp;are&nbsp;naively&nbsp;substituted&nbsp;into&nbsp;an&nbsp;expression,<br>
+precision&nbsp;errors&nbsp;may&nbsp;adversely&nbsp;affect&nbsp;the&nbsp;result.&nbsp;For&nbsp;example,<br>
+adding&nbsp;1e16&nbsp;(a&nbsp;Float)&nbsp;to&nbsp;1&nbsp;will&nbsp;truncate&nbsp;to&nbsp;1e16;&nbsp;if&nbsp;1e16&nbsp;is<br>
+then&nbsp;subtracted,&nbsp;the&nbsp;result&nbsp;will&nbsp;be&nbsp;0.<br>
+That&nbsp;is&nbsp;exactly&nbsp;what&nbsp;happens&nbsp;in&nbsp;the&nbsp;following:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;from&nbsp;sympy.abc&nbsp;import&nbsp;x,&nbsp;y,&nbsp;z<br>
+&gt;&gt;&gt;&nbsp;values&nbsp;=&nbsp;{x:&nbsp;1e16,&nbsp;y:&nbsp;1,&nbsp;z:&nbsp;1e16}<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;y&nbsp;-&nbsp;z).<a href="#Relation-subs">subs</a>(values)<br>
+0<br>
+&nbsp;<br>
+Using&nbsp;the&nbsp;subs&nbsp;argument&nbsp;for&nbsp;evalf&nbsp;is&nbsp;the&nbsp;accurate&nbsp;way&nbsp;to<br>
+evaluate&nbsp;such&nbsp;an&nbsp;expression:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;(x&nbsp;+&nbsp;y&nbsp;-&nbsp;z).<a href="#Relation-evalf">evalf</a>(subs=values)<br>
+1.00000000000000</tt></dd></dl>
+
+<dl><dt><a name="Relation-n"><strong>n</strong></a> = <a href="#Relation-evalf">evalf</a>(self, n=15, subs=None, maxn=100, chop=False, strict=False, quad=None, verbose=False)</dt></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>x</strong> = x<br>
+<strong>y</strong> = y</td></tr></table>
+</body></html>
