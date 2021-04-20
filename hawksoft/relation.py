@@ -1,18 +1,29 @@
 # relation.py
 """
-This module defined  Realtion class as an complimentation to sympy package. 
-you can use it like this:
-1 define an relation object:
+@author hawksoft
+
+This package provides Realtion class as an complement to sympy package. 
+
+## install: 
+    pip install hawksoft.relation
+
+## usage:
+
+remember: Relation is defined on a set A, which is called discourse. so the first thing is define a set A.
+1 set discourse A at first
+  Relation.setA(1,2,3)
+2 create  a relation object:
   r1 = Relation((1,2),(2,3))
-  r2 = Ralation((2,3),(1,3))
-2 use thes object
+3 use the object
   r1.showSet()  # will show the relation as a set
   r1.showGraph() # will show the relation as a graph
   r1.showMatrix() # will show the relation as a matrix  
 """
 import sympy
+
 from sympy.abc import x,y
-import graphviz as gz
+
+#import graphviz as gz
 import networkx
 
 #import matplotlib
@@ -23,50 +34,55 @@ import matplotlib.pyplot as plt
 
 class Relation(sympy.FiniteSet):
     """
-    define a class for sympy.
+    Define Relation class inherited from FinitSet.
     @author hawksoft
-    Parameters:
       
     """
-    def __init__(self,*items,name='noName',index = None):
+    A = sympy.FiniteSet()
+    id2items = {}
+    @classmethod
+    def setA(cls,*items):
+        cls.A = sympy.FiniteSet(*items)
+        cls.id2items= {}
+        num  = 0
+        for i in cls.A:
+            cls.id2items[num] = i
+            num = num + 1
+    @classmethod
+    def getUniversal(cls):
+        temp = cls.A * cls.A
+        l = []
+        for i in temp:
+            l.append(i)
+        return Relation(*l,name = 'Universal Relation')
+    @classmethod
+    def getIdentity(cls):
+        l = []
+        for i in range(0,len(cls.id2items)):
+             item = (cls.id2items[i],cls.id2items[i])
+             l.append(item)
+        return Relation(*l)
+    def __init__(self,*items,name='noName'):
         '''
-        init a relation
+        init a relation object
         parameters:
-          para1: items: 2-tuples list
+          para1: items: 2-tuple list
           para2: name: you can give name to the relation
           para3:index: the set on which the relation define
         returns
            a relation object  
         '''
-        sympy.FiniteSet(self,*items)
-        self.name = name
-        if index == None:
-            self.findAB()
+        #if sympy.Eq(self.A,sympy.EmptySet):
+        #    print('empty A')
+        #    self.setA(1,2,3,4)
+        if len(items) == 0:
+            sympy.FiniteSet(('xxx','xxx'))
         else:
-            self.id2items = index
-    def findAB(self):
-        self.A = sympy.FiniteSet()
-        self.B = sympy.FiniteSet()
-        for i in self:
-            self.A = self.A.union(sympy.FiniteSet(i[0]))
-            self.B = self.B.union(sympy.FiniteSet(i[1]))
-        self.C = self.A.union(self.B)
-        self.id2items= {}
-        num  = 0
-        for i in self.C:
-            self.id2items[num] = i
-            num = num + 1
-    def get_index(self):
-        return self.id2items
-    def findC(self):
-        ta = sympy.ImageSet(sympy.Lambda(x,x),self)
-        #ta = sympy.ConditionSet(x,sympy.(x),self)
-        print(ta)
-        for i in ta:
-            print(i[0],i[1])
-    def showSet(self):
-        sympy.pprint(self)
-    def drawGraph1(self):
+            sympy.FiniteSet(self,*items)
+        self.name = name
+        
+    
+    def drawGraphbyGraphviz(self):
         g = gz.Graph(format='png')
         for i in self.C:
             g.node(str(i))
@@ -76,17 +92,7 @@ class Relation(sympy.FiniteSet):
         g.edges(l)
         #print(g.source)
         g.render('./test',view=True) 
-    def showGraph(self):
-        g = networkx.Graph()
-        g.add_nodes_from([1,2,3,4,5])
-        g.add_edges_from([(1,2),(1,3),(2,3),(4,5),(5,4)])
-        plt.subplot(111)
-        networkx.draw(g, with_labels=True, font_weight='bold')
-        plt.show()
-    def showMatrix(self):
-        self.toMatrix()
-        sympy.pprint(self.matrix)
-    def drawDigraph(self):
+    def drawDigraphbyGraphviz(self):
         g = gz.Digraph(format='png')
         for i in self.A:
             g.node(str(i))
@@ -96,31 +102,40 @@ class Relation(sympy.FiniteSet):
         g.edges(l)
         #print(g.source)
         g.render('./test',view=True) 
-    def __sub__(self,subs):
-        temp = sympy.Complement(self,subs)
-        l = []
-        for i in temp:
-            l.append(i)
-        result = Relation(*l) 
-        return result
-    def __add__(self,adds):
-        temp = self.union(adds)
-        l = []
-        for i in temp:
-            l.append(i)
-        result = Relation(*l) 
-        return result
-    def toMatrix(self):
-        mat = []
-        for i in range(0,len(self.id2items)):
-            line = []
-            for j  in range(0,len(self.id2items)):
+    def showSet(self):
+        if not self.is_empty:
+            sympy.pprint(self)
+    def showGraph(self):
+        g = networkx.DiGraph()
+        listNode = [self.id2items[i] for i in self.id2items]
+        g.add_nodes_from(listNode)
+        listEdge =[]
+        for i in range(len(self.id2items)):
+            for j in range(len(self.id2items)):
                 item = (self.id2items[i],self.id2items[j])
-                if self.contains(item)==True:
-                    line.append(1)
-                else:
-                    line.append(0)
-            mat.append(line)
+                if self.contains(item) == True:
+                    listEdge.append(item)
+        g.add_edges_from(listEdge)
+        plt.subplot(111)
+        networkx.draw(g, with_labels=True, font_weight='bold')
+        plt.show()
+    def showMatrix(self):
+        self.toMatrix()
+        sympy.pprint(self.matrix)
+    def toMatrix(self):
+        if self.is_empty:
+            matrix = sympy.zeros(len(len(self.id2itmes),len(self.id2itmes)))
+        else:
+            mat = []
+            for i in range(0,len(self.id2items)):
+                line = []
+                for j  in range(0,len(self.id2items)):
+                    item = (self.id2items[i],self.id2items[j])
+                    if self.contains(item)==True:
+                        line.append(1)
+                    else:
+                        line.append(0)
+                mat.append(line)
         self.matrix = sympy.Matrix(mat)
         return self.matrix
     def fromMatrix(self,matrix):
@@ -131,23 +146,54 @@ class Relation(sympy.FiniteSet):
                 if rows[j] == 1:
                     item = (self.id2items[i],self.id2items[j])
                     l.append(item)
+        if len(l) == 0:
+            l.append(('xxx','xxx'))
         return Relation(*l)
-    def identity(self):
+    def __add__(self,adds):
+        temp = self.union(adds)
         l = []
-        for i in range(0,len(self.id2items)):
-             item = (self.id2items[i],self.id2items[i])
-             l.append(item)
-        return Relation(*l)
-    def converse(self):
-        mat1 = self.toMatrix()
-        mat2 = mat1.T
-        return self.fromMatrix(mat2)
-    def compound(self,num):
-         mat = self.toMatrix()
-         mat = mat**num
-         return self.fromMatrix(mat)
-    def refClosure(self):
-        return self + self.identity()
-    def symClosure(self):
-        return self + self.converse()
+        for i in temp:
+            l.append(i)
+        if len(l) == 0:
+            l.append(('xxx','xxx'))
+        result = Relation(*l) 
+        return result
+    def __sub__(self,subs):
+        temp = sympy.Complement(self,subs)
+        l = []
+        for i in temp:
+            l.append(i)
+        if len(l) == 0:
+            l.append(('xxx','xxx'))
+        result = Relation(*l) 
+        return result
+        
+    def __pow__(self,num):
+        mat = self.toMatrix()
+        if num == -1:
+            mat = mat.T
+        else:
+            mat = mat**num
+        return self.fromMatrix(mat)
+
+    def intersect(self,other):
+        temp = self.intersect(other)
+        print(temp)
+        l = []
+        for i in temp:
+            l.append(i)
+        if len(l) == 0:
+            l.append(('xxx','xxx'))
+        result = Relation(*l) 
+        return result
+    def reflectiveClosure(self):
+        return self + self.getIdentity()
+    def symmetricClosure(self):
+        return self + self ** -1
+    def transitiveClosure(self):
+        temp = self 
+        for i in range(2,len(self.id2items)):
+            temp1 = temp ** i
+            temp = temp + temp1
+        return temp
 
