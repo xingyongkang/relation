@@ -18,6 +18,8 @@ remember: Relation is defined on a set A, which is called discourse. so the firs
   r1.showSet()  # will show the relation as a set
   r1.showGraph() # will show the relation as a graph
   r1.showMatrix() # will show the relation as a matrix  
+4 the relation object can be used as sympy object 
+  r2 = r1 ** -1  # get converse relation
 """
 import sympy
 
@@ -36,12 +38,19 @@ class Relation(sympy.FiniteSet):
     """
     Define Relation class inherited from FinitSet.
     @author hawksoft
-      
     """
     A = sympy.FiniteSet()
     id2items = {}
     @classmethod
     def setA(cls,*items):
+        """
+        This is a class method. Set discourse
+
+        Parameters:
+            items: lists of elements of set
+        Returns:
+            no return
+        """
         cls.A = sympy.FiniteSet(*items)
         cls.id2items= {}
         num  = 0
@@ -50,6 +59,14 @@ class Relation(sympy.FiniteSet):
             num = num + 1
     @classmethod
     def getUniversal(cls):
+        """
+        This is a class method. Get the Universal Relation on the discourse.
+
+        Parameters:
+            none.
+        Returns:
+            Return the universal relation on discourse.
+        """
         temp = cls.A * cls.A
         l = []
         for i in temp:
@@ -57,6 +74,14 @@ class Relation(sympy.FiniteSet):
         return Relation(*l,name = 'Universal Relation')
     @classmethod
     def getIdentity(cls):
+        """
+        This is a class method. Get the Identity Relation on the discourse.
+
+        Parameters:
+            none.
+        Returns:
+            Return the identity relation on discourse.
+        """
         l = []
         for i in range(0,len(cls.id2items)):
              item = (cls.id2items[i],cls.id2items[i])
@@ -64,13 +89,17 @@ class Relation(sympy.FiniteSet):
         return Relation(*l)
     def __init__(self,*items,name='noName'):
         '''
-        init a relation object
+        Init a relation object.
+
         parameters:
-          para1: items: 2-tuple list
-          para2: name: you can give name to the relation
-          para3:index: the set on which the relation define
+          items: 2-tuple list define the relation
+          name:this is an optional argument,you can give name to the relation
         returns
            a relation object  
+        example:
+           Relation.setA(1,2,3)
+           r1  = Relation((1,2),(2,3),name = "simple relation')
+
         '''
         #if sympy.Eq(self.A,sympy.EmptySet):
         #    print('empty A')
@@ -83,6 +112,9 @@ class Relation(sympy.FiniteSet):
         
     
     def drawGraphbyGraphviz(self):
+        '''
+        Draw relation graph by using graphviz package. Do not use it.
+        '''
         g = gz.Graph(format='png')
         for i in self.C:
             g.node(str(i))
@@ -93,6 +125,9 @@ class Relation(sympy.FiniteSet):
         #print(g.source)
         g.render('./test',view=True) 
     def drawDigraphbyGraphviz(self):
+        '''
+        Draw relation graph by using graphviz package. Do not use it.
+        '''
         g = gz.Digraph(format='png')
         for i in self.A:
             g.node(str(i))
@@ -102,10 +137,26 @@ class Relation(sympy.FiniteSet):
         g.edges(l)
         #print(g.source)
         g.render('./test',view=True) 
+
     def showSet(self):
-        if not self.is_empty:
-            sympy.pprint(self)
+        '''
+        This method show relation as a set
+
+        Parameters:
+          None.
+        Returns:
+          None.
+        '''
+        sympy.pprint(self)
     def showGraph(self):
+        '''
+        This method show relation as a graph.
+
+        Parameters:
+          None.
+        Returns:
+          None.
+        '''
         g = networkx.DiGraph()
         listNode = [self.id2items[i] for i in self.id2items]
         g.add_nodes_from(listNode)
@@ -120,6 +171,14 @@ class Relation(sympy.FiniteSet):
         networkx.draw(g, with_labels=True, font_weight='bold')
         plt.show()
     def showMatrix(self):
+        '''
+        This method show relation as a matrix.
+
+        Parameters:
+          None.
+        Returns:
+          None.
+        '''
         self.toMatrix()
         sympy.pprint(self.matrix)
     def toMatrix(self):
@@ -150,6 +209,9 @@ class Relation(sympy.FiniteSet):
             l.append(('xxx','xxx'))
         return Relation(*l)
     def __add__(self,adds):
+        '''
+        Return a new relation which is self union with adds.
+        ''' 
         temp = self.union(adds)
         l = []
         for i in temp:
@@ -159,6 +221,9 @@ class Relation(sympy.FiniteSet):
         result = Relation(*l) 
         return result
     def __sub__(self,subs):
+        '''
+        Return a new relation which is self sub subs.
+        ''' 
         temp = sympy.Complement(self,subs)
         l = []
         for i in temp:
@@ -169,6 +234,12 @@ class Relation(sympy.FiniteSet):
         return result
         
     def __pow__(self,num):
+        '''
+        Return a new relation which is self's power.
+        
+        Parameters
+          num: the exponents
+        ''' 
         mat = self.toMatrix()
         if num == -1:
             mat = mat.T
@@ -187,10 +258,19 @@ class Relation(sympy.FiniteSet):
         result = Relation(*l) 
         return result
     def reflectiveClosure(self):
+        '''
+        Return the reflectiveClosure
+        '''
         return self + self.getIdentity()
     def symmetricClosure(self):
+        '''
+        Return the symmetricClosure
+        '''
         return self + self ** -1
     def transitiveClosure(self):
+        '''
+        Return the transitiveClosure
+        '''
         temp = self 
         for i in range(2,len(self.id2items)):
             temp1 = temp ** i
